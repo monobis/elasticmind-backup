@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LogoHeaderWhite from "@/assets/logo-header-white.svg";
+import LogoHeaderWhite from "@/../public/logo-header-white.svg";
 import styles from "./style.module.css";
 
 export function Header() {
