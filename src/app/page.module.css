@@ -6,3 +6,47 @@
   width: 100%;
   color: white;
 }
+
+.centerContent {
+  width: 39.56rem;
+  margin-top: 10rem;
+  margin-left: 8rem;
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-100);
+  line-height: 5rem;
+}
+
+.description {
+  margin-top: 2.8rem;
+
+  font-size: var(--font-size-md);
+  color: var(--color-green-100);
+  width: 30rem;
+}
+
+.buttonReview {
+  display: flex;
+  align-items: center;
+  border: 0;
+  background-color: var(--color-rose-300);
+  color: var(--color-white);
+  font-size: var(--font-size-md);
+  padding: 1rem;
+  padding-inline: 2rem;
+  border-radius: 1.7rem;
+  margin-top: 2.5rem;
+  margin-left: 4rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonReview:hover {
+  background-color: var(--color-rose-200);
+}
+
+.textButton {
+  margin-right: 0.5rem;
+}
