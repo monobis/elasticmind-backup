@@ -22,9 +22,8 @@ export default function Home() {
             <span className={styles.textButton}>Review our tech stack</span>{" "}
             <ArrowDown size={20} />
           </button>
-
-          <Card />
         </div>
+        <Card />
       </section>
     </main>
   );

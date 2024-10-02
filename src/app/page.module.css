@@ -8,6 +8,9 @@
   color: white;
 }
 
+.content {
+  padding-bottom: 5rem;
+}
 .centerContent {
   width: 39.56rem;
   margin-top: 10rem;
@@ -15,7 +18,7 @@
 }
 
 .title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-3xl);
   color: var(--color-gray-100);
   line-height: 5rem;
 }
