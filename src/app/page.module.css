@@ -1,6 +1,7 @@
 .container {
   background-image: url("/bg-image.png");
   background-repeat: no-repeat;
+  background-size: 43%;
   background-position: right;
   height: 100vh;
   width: 100%;

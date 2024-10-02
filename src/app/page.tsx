@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import styles from "./page.module.css";
 import { ArrowDown } from "react-feather";
+import { Card } from "@/components/Card";
 
 export default function Home() {
   return (
@@ -21,6 +22,8 @@ export default function Home() {
             <span className={styles.textButton}>Review our tech stack</span>{" "}
             <ArrowDown size={20} />
           </button>
+
+          <Card />
         </div>
       </section>
     </main>
