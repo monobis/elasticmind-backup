@@ -16,4 +16,9 @@
   --color-violet-600: #4a0dcc;
 
   --color-green-100: #e7fff9;
+
+  --font-size-sm: 16px;
+  --font-size-md: 20px;
+  --font-size-lg: 28px;
+  --font-size-xl: 70px;
 }
