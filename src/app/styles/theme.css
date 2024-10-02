@@ -20,5 +20,7 @@
   --font-size-sm: 16px;
   --font-size-md: 20px;
   --font-size-lg: 28px;
-  --font-size-xl: 70px;
+  --font-size-xl: 35px;
+  --font-size-2xl: 48px;
+  --font-size-3xl: 70px;
 }

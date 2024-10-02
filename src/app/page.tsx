@@ -1,6 +1,7 @@
-import { Header } from "@/Header";
+import { Header } from "@/components/Header";
 import styles from "./page.module.css";
 import { ArrowDown } from "react-feather";
+import { Card } from "@/components/Card";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
             <ArrowDown size={20} />
           </button>
         </div>
+        <Card />
       </section>
     </main>
   );

@@ -1,0 +1,53 @@
+.container {
+  background-color: var(--color-gray-700);
+  margin-block: 10rem;
+  padding-top: 5rem;
+  width: 46rem;
+  height: 28rem;
+  margin-left: 10rem;
+  border-radius: 1rem;
+  padding-left: 2.5rem;
+}
+
+.emphasis {
+  color: var(--color-rose-300);
+  font-size: var(--font-size-xl);
+  font-weight: 300;
+  line-height: 1.5rem;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: 1rem;
+  line-height: 4rem;
+}
+
+.list {
+  color: var(--color-gray-100);
+  font-size: var(--font-size-md);
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-rose-300);
+  border-radius: 2rem;
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  margin-top: 2.5rem;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--color-rose-200);
+}
+
+.buttonText {
+  margin-right: 0.4rem;
+}
