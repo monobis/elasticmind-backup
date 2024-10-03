@@ -1,4 +1,5 @@
-import { Header } from "@/Header";
+import { Header } from "@/components/Header";
+import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
 import { ArrowDown } from "react-feather";
 
@@ -21,6 +22,11 @@ export default function Home() {
             <span className={styles.textButton}>Review our tech stack</span>{" "}
             <ArrowDown size={20} />
           </button>
+        </div>
+
+        <div className={styles.carousel}>
+          <h2 className={styles.titleCarousel}>Priorities</h2>
+          <Carousel />
         </div>
       </section>
     </main>
