@@ -1,10 +1,8 @@
 .container {
   background-color: var(--color-gray-700);
-  margin-block: 10rem;
   padding-top: 5rem;
   width: 46rem;
   height: 28rem;
-  margin-left: 10rem;
   border-radius: 1rem;
   padding-left: 2.5rem;
 }

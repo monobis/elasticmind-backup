@@ -54,3 +54,16 @@
 .textButton {
   margin-right: 0.5rem;
 }
+
+.carousel {
+  margin-top: 12.5rem;
+}
+
+.titleCarousel {
+  text-transform: uppercase;
+  color: var(--color-rose-300);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  margin-left: 2.8rem;
+  margin-bottom: 0.8rem;
+}
