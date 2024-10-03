@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
+import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
 import { ArrowDown } from "react-feather";
-import { Card } from "@/components/Card";
 
 export default function Home() {
   return (
@@ -23,7 +23,11 @@ export default function Home() {
             <ArrowDown size={20} />
           </button>
         </div>
-        <Card />
+
+        <div className={styles.carousel}>
+          <h2 className={styles.titleCarousel}>Priorities</h2>
+          <Carousel />
+        </div>
       </section>
     </main>
   );
