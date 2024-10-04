@@ -1,7 +1,7 @@
 import { ArrowRight } from "react-feather";
 import styles from "./styles.module.css";
 
-export function Card() {
+export function CardPriority() {
   return (
     <main className={styles.container}>
       <h4 className={styles.emphasis}>To nurture</h4>

@@ -1,9 +1,15 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import { Card } from "../Card";
+import { useState, useEffect, useRef, ReactNode } from "react";
+import { CardPriority } from "../CardPriority";
 import styles from "./styles.module.css";
 import { motion } from "framer-motion";
-export function Carousel() {
+import { CardTechnologyPrimary } from "../CardTechnologyPrimary";
+
+interface CarouselProps {
+  children: ReactNode;
+}
+
+export function Carousel({ children }: CarouselProps) {
   const [width, setWidth] = useState<number>(0);
   const carousel = useRef<HTMLDivElement>(null);
 
@@ -33,59 +39,7 @@ export function Carousel() {
           animate={{ x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
+          {children}
         </motion.div>
       </motion.div>
     </div>

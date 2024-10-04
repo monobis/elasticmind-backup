@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-color: var(--color-gray-700);
+  padding-bottom: 3.5rem;
+  width: 46rem;
+  height: 28rem;
+  border-radius: 1rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-rose-300);
+  border-radius: 2rem;
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--color-rose-200);
+}
+
+.buttonText {
+  margin-right: 0.4rem;
+}
