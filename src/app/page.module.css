@@ -67,3 +67,24 @@
   margin-left: 2.8rem;
   margin-bottom: 0.8rem;
 }
+
+.containerCard {
+  width: 100%;
+  min-width: 50rem;
+  min-height: 12.5rem;
+  padding-inline: 2.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+}
+
+.cardTechnologySecondary {
+  display: flex;
+  justify-content: space-between;
+}
