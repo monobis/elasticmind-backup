@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 import { ArrowDown } from "react-feather";
 import { CardPriority } from "@/components/CardPriority";
 import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
+import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
 
         <div className={styles.carousel}>
           <h2 className={styles.titleCarousel}>Priorities</h2>
-          <Carousel>
+          <Carousel key="carousel-priorities">
             <motion.div className={styles.containerCard}>
               <div className={styles.card}>
                 <CardPriority />
@@ -90,10 +91,49 @@ export default function Home() {
 
         <div className={styles.carousel}>
           <h2 className={styles.titleCarousel}>Technology</h2>
-          <Carousel>
+          <Carousel key="carousel-technologies">
             <motion.div className={styles.containerCard}>
               <div className={styles.card}>
                 <CardTechnologyPrimary />
+              </div>
+            </motion.div>
+
+            <motion.div className={styles.containerCard}>
+              <div className={styles.card}>
+                <div className={styles.cardTechnologySecondary}>
+                  <CardTechnologySecondary />
+                  <CardTechnologySecondary />
+                </div>
+                <div className={styles.cardTechnologySecondary}>
+                  <CardTechnologySecondary />
+                  <CardTechnologySecondary />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div className={styles.containerCard}>
+              <div className={styles.card}>
+                <div className={styles.cardTechnologySecondary}>
+                  <CardTechnologySecondary />
+                  <CardTechnologySecondary />
+                </div>
+                <div className={styles.cardTechnologySecondary}>
+                  <CardTechnologySecondary />
+                  <CardTechnologySecondary />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div className={styles.containerCard}>
+              <div className={styles.card}>
+                <div className={styles.cardTechnologySecondary}>
+                  <CardTechnologySecondary />
+                  <CardTechnologySecondary />
+                </div>
+                <div className={styles.cardTechnologySecondary}>
+                  <CardTechnologySecondary />
+                  <CardTechnologySecondary />
+                </div>
               </div>
             </motion.div>
           </Carousel>
