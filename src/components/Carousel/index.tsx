@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { Card } from "../Card";
+import { CardPriority } from "../CardPriority";
 import styles from "./styles.module.css";
 import { motion } from "framer-motion";
 export function Carousel() {
@@ -35,55 +35,55 @@ export function Carousel() {
         >
           <motion.div className={styles.containerCard}>
             <div className={styles.card}>
-              <Card />
+              <CardPriority />
             </div>
           </motion.div>
           <motion.div className={styles.containerCard}>
             <div className={styles.card}>
-              <Card />
+              <CardPriority />
             </div>
           </motion.div>
           <motion.div className={styles.containerCard}>
             <div className={styles.card}>
-              <Card />
+              <CardPriority />
             </div>
           </motion.div>
           <motion.div className={styles.containerCard}>
             <div className={styles.card}>
-              <Card />
+              <CardPriority />
             </div>
           </motion.div>
           <motion.div className={styles.containerCard}>
             <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
+              <CardPriority />
             </div>
           </motion.div>
 
           <motion.div className={styles.containerCard}>
             <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
-            </div>
-          </motion.div>
-          <motion.div className={styles.containerCard}>
-            <div className={styles.card}>
-              <Card />
+              <CardPriority />
             </div>
           </motion.div>
 
           <motion.div className={styles.containerCard}>
             <div className={styles.card}>
-              <Card />
+              <CardPriority />
+            </div>
+          </motion.div>
+          <motion.div className={styles.containerCard}>
+            <div className={styles.card}>
+              <CardPriority />
+            </div>
+          </motion.div>
+          <motion.div className={styles.containerCard}>
+            <div className={styles.card}>
+              <CardPriority />
+            </div>
+          </motion.div>
+
+          <motion.div className={styles.containerCard}>
+            <div className={styles.card}>
+              <CardPriority />
             </div>
           </motion.div>
         </motion.div>
