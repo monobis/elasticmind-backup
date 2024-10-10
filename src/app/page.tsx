@@ -138,6 +138,34 @@ export default function Home() {
             </motion.div>
           </Carousel>
         </div>
+
+        <div className={styles.ourServices}>
+          <h2 className={styles.titleCarousel}>Priorities</h2>
+          <div className={styles.ourServicesContent}>
+            <h1 className={styles.ourServicesTitle}>
+              Delivering Future Digital Services
+            </h1>
+            <div className={styles.numberData}>
+              <div className={styles.numberDataContent}>
+                <span className={styles.clientsNumber}>
+                  1,000<span>+</span>
+                </span>
+                <span className={styles.clientsText}>
+                  Satisfied Clients Worldwide
+                </span>
+              </div>
+
+              <div className={styles.numberDataContent}>
+                <span className={styles.clientsNumber}>
+                  1,000<span>+</span>
+                </span>
+                <span className={styles.clientsText}>
+                  Satisfied Clients Worldwide
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
