@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
-import { ArrowDown } from "react-feather";
+import { ArrowDown, Figma } from "react-feather";
 import { CardPriority } from "@/components/CardPriority";
 import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
+import { CardService } from "@/components/CardService";
 
 export default function Home() {
   return (
@@ -165,6 +166,14 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className={styles.services}>
+          <CardService
+            title="Design"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
+            Icon={Figma}
+          />
         </div>
       </section>
     </main>
