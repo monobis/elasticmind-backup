@@ -57,6 +57,7 @@
 
 .carousel {
   margin-top: 12.5rem;
+  margin-inline-start: 1rem;
 }
 
 .titleCarousel {
@@ -87,4 +88,82 @@
 .cardTechnologySecondary {
   display: flex;
   justify-content: space-between;
+}
+
+.ourServices {
+  margin-top: 16rem;
+  padding-inline-start: 4rem;
+  padding-inline-end: 2rem;
+  max-width: 140rem;
+}
+
+.ourServicesContent {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+}
+
+.ourServicesTitle {
+  display: flex;
+  text-align: start;
+  align-items: center;
+  font-size: var(--font-size-3xl);
+  color: var(--color-gray-100);
+  font-weight: 700;
+  max-width: 37rem;
+  line-height: 5rem;
+}
+
+.numberData {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 46rem;
+  padding-inline: 1rem;
+  padding-block: 5rem;
+  background: rgb(109, 12, 183);
+  background: linear-gradient(
+    47deg,
+    rgba(109, 12, 183, 1) 0%,
+    rgba(220, 8, 114, 1) 100%
+  );
+  color: var(--color-white);
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  border-radius: 0.7rem;
+}
+
+.numberDataContent {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.clientsNumber {
+  font-size: var(--font-size-2xl);
+}
+
+.clientsText {
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  color: var(--color-gray-100);
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  margin-inline-start: 4rem;
+  padding-inline-end: 2rem;
+  margin-top: 16rem;
+  padding-inline: 4rem;
+  max-width: 140rem;
+}
+
+@media (max-width: 1950px) {
+  .services {
+    margin-inline-start: 1rem;
+    padding-inline-end: 1rem;
+  }
 }
