@@ -4,10 +4,19 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
-import { ArrowDown } from "react-feather";
+import {
+  ArrowDown,
+  Code,
+  Figma,
+  Grid,
+  Search,
+  Settings,
+  Tool,
+} from "react-feather";
 import { CardPriority } from "@/components/CardPriority";
 import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
+import { CardService } from "@/components/CardService";
 
 export default function Home() {
   return (
@@ -165,6 +174,44 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className={styles.services}>
+          <CardService
+            title="Design"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
+            Icon={Figma}
+          />
+
+          <CardService
+            title="Software Engineering"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
+            Icon={Code}
+          />
+
+          <CardService
+            title="Quality Assurance"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
+            Icon={Search}
+          />
+
+          <CardService
+            title="DevOps"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
+            Icon={Settings}
+          />
+
+          <CardService
+            title="Support & Maintenance"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
+            Icon={Tool}
+          />
+
+          <CardService
+            title="Project Management"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
+            Icon={Grid}
+          />
         </div>
       </section>
     </main>
