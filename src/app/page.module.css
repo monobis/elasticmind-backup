@@ -150,7 +150,20 @@
 }
 
 .services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  margin-inline-start: 4rem;
+  padding-inline-end: 2rem;
   margin-top: 16rem;
   padding-inline: 4rem;
   max-width: 140rem;
+}
+
+@media (max-width: 1950px) {
+  .services {
+    margin-inline-start: 1rem;
+    padding-inline-end: 1rem;
+  }
 }

@@ -1,10 +1,11 @@
 import { ArrowRight } from "react-feather";
 import styles from "./styles.module.css";
+import React from "react";
 
 interface CardServiceProps {
   title: string;
   description: string;
-  Icon: React.FC;
+  Icon: React.ComponentType<{ size?: number | string }>;
 }
 
 export function CardService({ title, description, Icon }: CardServiceProps) {
@@ -13,7 +14,7 @@ export function CardService({ title, description, Icon }: CardServiceProps) {
       <div className={styles.header}>
         <h3>{title}</h3>
         <div className={styles.icon}>
-          <Icon />
+          <Icon size={36} />
         </div>
       </div>
       <p className={styles.description}>{description}</p>
