@@ -213,6 +213,23 @@ export default function Home() {
             Icon={Grid}
           />
         </div>
+
+        <div className={styles.businesses}>
+          <h2 className={styles.titleCarousel}>Businesses</h2>
+          <div className={styles.businessesContent}>
+            {" "}
+            <p className={styles.businessesText}>
+              Depending on{" "}
+              <span className={styles.businessesEmphasis}>business</span>{" "}
+              maturity, we try to{" "}
+              <span className={styles.businessesEmphasis}>anticipate</span> and
+              cover the most common{" "}
+              <span className={styles.businessesEmphasis}>
+                challenges companies face.
+              </span>
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );
