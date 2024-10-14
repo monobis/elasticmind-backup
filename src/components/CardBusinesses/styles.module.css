@@ -1,0 +1,37 @@
+.container {
+  padding-bottom: 4rem;
+  padding-inline: 2rem;
+  width: 30rem;
+  background-color: var(--color-violet-600);
+  color: var(--color-gray-100);
+  border-radius: 0.5rem;
+}
+
+.content {
+  width: 24rem;
+  padding-top: 11rem;
+  font-size: var(--font-size-md);
+  font-weight: 400;
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: var(--color-white);
+  border: 1px solid var(--color-gray-100);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--color-gray-300);
+  color: var(--color-white);
+}

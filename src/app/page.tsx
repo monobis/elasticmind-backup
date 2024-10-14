@@ -17,6 +17,7 @@ import { CardPriority } from "@/components/CardPriority";
 import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
 import { CardService } from "@/components/CardService";
+import { CardBusinesses } from "@/components/CardBusinesses";
 
 export default function Home() {
   return (
@@ -228,6 +229,15 @@ export default function Home() {
                 challenges companies face.
               </span>
             </p>
+            <CardBusinesses
+              title="Startups"
+              description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+            />
           </div>
         </div>
       </section>
