@@ -181,6 +181,13 @@
   font-weight: 700;
 }
 
+.containerCardBusinesses {
+  width: 100%;
+  min-width: 32rem;
+  min-height: 12.5rem;
+  margin-top: 4rem;
+}
+
 @media (max-width: 1950px) {
   .services {
     margin-inline-start: 1rem;
