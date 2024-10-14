@@ -152,13 +152,33 @@
 .services {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 2rem;
   justify-content: center;
   margin-inline-start: 4rem;
   padding-inline-end: 2rem;
   margin-top: 16rem;
   padding-inline: 4rem;
   max-width: 140rem;
+}
+
+.businesses {
+  margin-top: 16rem;
+  padding-inline-start: 4rem;
+  padding-inline-end: 2rem;
+}
+
+.businessesContent {
+  margin-left: 2.8rem;
+}
+
+.businessesText {
+  font-size: var(--font-size-2xl);
+  color: var(--color-gray-100);
+  font-weight: 300;
+}
+
+.businessesEmphasis {
+  font-weight: 700;
 }
 
 @media (max-width: 1950px) {
