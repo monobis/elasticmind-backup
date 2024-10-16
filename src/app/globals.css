@@ -40,3 +40,20 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-300);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-rose-300);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-yellow-500);
+}
