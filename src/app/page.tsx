@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-
 import { Header } from "@/components/Header";
 import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
@@ -366,6 +365,8 @@ export default function Home() {
             </Carousel>
           </div>
         </div>
+
+        <div className={styles.imageReinvent}></div>
       </section>
     </main>
   );

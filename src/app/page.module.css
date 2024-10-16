@@ -188,6 +188,16 @@
   margin-top: 4rem;
 }
 
+.imageReinvent {
+  background-image: url("/reinvent-image.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  margin-top: 17rem;
+  height: 85vh;
+  width: 100%;
+}
+
 @media (max-width: 1950px) {
   .services {
     margin-inline-start: 1rem;
