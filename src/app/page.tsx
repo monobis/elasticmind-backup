@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
-import Reinvent from "@/../public/reinvent-image.png";
 import {
   ArrowDown,
   Code,
@@ -18,7 +17,6 @@ import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
 import { CardService } from "@/components/CardService";
 import { CardBusinesses } from "@/components/CardBusinesses";
-import Image from "next/image";
 
 export default function Home() {
   return (
