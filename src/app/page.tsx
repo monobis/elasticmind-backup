@@ -367,6 +367,13 @@ export default function Home() {
         </div>
 
         <div className={styles.imageReinvent}></div>
+
+        <div className={styles.feedbackContainer}>
+          <h2 className={styles.titleCarousel}>Feedbacks</h2>
+          <div className={styles.feedbackContent}>
+            <h1 className={styles.feedbackTitle}>Feedbacks from Our Clients</h1>
+          </div>
+        </div>
       </section>
     </main>
   );

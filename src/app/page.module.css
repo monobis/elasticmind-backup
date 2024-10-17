@@ -198,6 +198,22 @@
   width: 100%;
 }
 
+.feedbackContainer {
+  margin-top: 14rem;
+  padding-inline-start: 4rem;
+  padding-inline-end: 2rem;
+}
+
+.feedbackContent {
+  margin-left: 2.8rem;
+}
+
+.feedbackTitle {
+  color: var(--color-gray-100);
+  font-size: var(--font-size-2xl);
+  width: 26rem;
+}
+
 @media (max-width: 1950px) {
   .services {
     margin-inline-start: 1rem;
