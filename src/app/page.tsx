@@ -17,6 +17,7 @@ import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
 import { CardService } from "@/components/CardService";
 import { CardBusinesses } from "@/components/CardBusinesses";
+import { CardFeedback } from "@/components/CardFeedback";
 
 export default function Home() {
   return (
@@ -373,6 +374,14 @@ export default function Home() {
           <div className={styles.feedbackContent}>
             <h1 className={styles.feedbackTitle}>Feedbacks from Our Clients</h1>
           </div>
+
+          <CardFeedback
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+            author="John Doe"
+            stars={5}
+          />
         </div>
       </section>
     </main>
