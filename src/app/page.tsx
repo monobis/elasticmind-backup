@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
+import PeapleImage from "@/../public/peaple-image.jpeg";
 import {
   ArrowDown,
   Code,
@@ -376,6 +377,7 @@ export default function Home() {
           </div>
 
           <CardFeedback
+            image={PeapleImage}
             content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
         tempor incididunt ut labore et dolore doloremque laudantium, totam rem
         aperiam, eaque ipsa quae ab illo inventore."
