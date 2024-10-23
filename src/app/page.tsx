@@ -19,6 +19,8 @@ import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
 import { CardService } from "@/components/CardService";
 import { CardBusinesses } from "@/components/CardBusinesses";
 import { CardFeedback } from "@/components/CardFeedback";
+import { SwiperSlide } from "swiper/react";
+import { Slider } from "@/components/Slider";
 
 export default function Home() {
   return (
@@ -376,14 +378,87 @@ export default function Home() {
             <h1 className={styles.feedbackTitle}>Feedbacks from Our Clients</h1>
           </div>
 
-          <CardFeedback
-            image={PeapleImage}
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+          <div className={styles.feedbackSlider}>
+            <Slider>
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
         tempor incididunt ut labore et dolore doloremque laudantium, totam rem
         aperiam, eaque ipsa quae ab illo inventore."
-            author="John Doe"
-            stars={5}
-          />
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+            </Slider>
+          </div>
         </div>
       </section>
     </main>

@@ -214,6 +214,16 @@
   width: 26rem;
 }
 
+.feedbackSlider {
+  margin-top: 6rem;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 1950px) {
   .services {
     margin-inline-start: 1rem;

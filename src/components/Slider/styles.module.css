@@ -1,0 +1,8 @@
+.swiper-button-prev,
+.swiper-button-next {
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-color: var(--color-rose-300);
+  color: var(--color-rose-300);
+  width: var(--swiper-navigation-size);
+  height: var(--swiper-navigation-size);
+}

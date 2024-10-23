@@ -20,6 +20,16 @@
 
   --color-green-100: #e7fff9;
 
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-color: var(--color-rose-300);
+  --swiper-pagination-bullet-inactive-color: var(--color-rose-200);
+  --swiper-pagination-bullet-inactive-opacity: 0.5;
+
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: var(--color-rose-300);
+
   --font-size-sm: 16px;
   --font-size-md: 20px;
   --font-size-lg: 26px;
