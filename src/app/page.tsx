@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
-
 import { Header } from "@/components/Header";
 import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
+import PeapleImage from "@/../public/peaple-image.jpeg";
 import {
   ArrowDown,
   Code,
@@ -17,6 +17,10 @@ import { CardPriority } from "@/components/CardPriority";
 import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
 import { CardService } from "@/components/CardService";
+import { CardBusinesses } from "@/components/CardBusinesses";
+import { CardFeedback } from "@/components/CardFeedback";
+import { SwiperSlide } from "swiper/react";
+import { Slider } from "@/components/Slider";
 
 export default function Home() {
   return (
@@ -212,6 +216,249 @@ export default function Home() {
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
             Icon={Grid}
           />
+        </div>
+
+        <div className={styles.businesses}>
+          <h2 className={styles.titleCarousel}>Businesses</h2>
+          <div className={styles.businessesContent}>
+            {" "}
+            <p className={styles.businessesText}>
+              Depending on{" "}
+              <span className={styles.businessesEmphasis}>business</span>{" "}
+              maturity, we try to{" "}
+              <span className={styles.businessesEmphasis}>anticipate</span> and
+              cover the most common{" "}
+              <span className={styles.businessesEmphasis}>
+                challenges companies face.
+              </span>
+            </p>
+            <Carousel key="carousel-businesses">
+              <motion.div className={styles.containerCardBusinesses}>
+                <div className={styles.card}>
+                  <CardBusinesses
+                    title="Startups"
+                    description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+                  />
+                </div>
+              </motion.div>
+              <motion.div className={styles.containerCardBusinesses}>
+                <div className={styles.card}>
+                  <CardBusinesses
+                    title="Enterprises"
+                    description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+                  />
+                </div>
+              </motion.div>
+              <motion.div className={styles.containerCardBusinesses}>
+                <div className={styles.card}>
+                  <CardBusinesses
+                    title="Small to medium"
+                    description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+                  />
+                </div>
+              </motion.div>
+              <motion.div className={styles.containerCardBusinesses}>
+                <div className={styles.card}>
+                  <CardBusinesses
+                    title="Startups"
+                    description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+                  />
+                </div>
+              </motion.div>
+              <motion.div className={styles.containerCardBusinesses}>
+                <div className={styles.card}>
+                  <CardBusinesses
+                    title="Enterprises"
+                    description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div className={styles.containerCardBusinesses}>
+                <div className={styles.card}>
+                  <CardBusinesses
+                    title="Small to medium"
+                    description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div className={styles.containerCardBusinesses}>
+                <div className={styles.card}>
+                  <CardBusinesses
+                    title="Startups"
+                    description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+                  />
+                </div>
+              </motion.div>
+              <motion.div className={styles.containerCardBusinesses}>
+                <div className={styles.card}>
+                  <CardBusinesses
+                    title="Enterprises"
+                    description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+                  />
+                </div>
+              </motion.div>
+              <motion.div className={styles.containerCardBusinesses}>
+                <div className={styles.card}>
+                  <CardBusinesses
+                    title="Small to medium"
+                    description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div className={styles.containerCardBusinesses}>
+                <div className={styles.card}>
+                  <CardBusinesses
+                    title="Startups"
+                    description="Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, sed 
+              eiusmod tempor incididunt ut labore 
+              et dolore doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae 
+              ab illo inventore"
+                  />
+                </div>
+              </motion.div>
+            </Carousel>
+          </div>
+        </div>
+
+        <div className={styles.imageReinvent}></div>
+
+        <div className={styles.feedbackContainer}>
+          <h2 className={styles.titleCarousel}>Feedbacks</h2>
+          <div className={styles.feedbackContent}>
+            <h1 className={styles.feedbackTitle}>Feedbacks from Our Clients</h1>
+          </div>
+
+          <div className={styles.feedbackSlider}>
+            <Slider>
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+            </Slider>
+          </div>
         </div>
       </section>
     </main>
