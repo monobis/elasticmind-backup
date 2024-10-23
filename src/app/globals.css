@@ -52,8 +52,9 @@ a {
 ::-webkit-scrollbar-thumb {
   background: var(--color-rose-300);
   border-radius: 10px;
+  cursor: grab;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-yellow-500);
+  background: var(--color-rose-200);
 }

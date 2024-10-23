@@ -25,7 +25,6 @@
 
 .description {
   margin-top: 2.8rem;
-
   font-size: var(--font-size-md);
   color: var(--color-green-100);
   width: 30rem;
@@ -121,11 +120,11 @@
   width: 46rem;
   padding-inline: 1rem;
   padding-block: 5rem;
-  background: rgb(109, 12, 183);
+  background: var(--color-violet-600);
   background: linear-gradient(
     47deg,
-    rgba(109, 12, 183, 1) 0%,
-    rgba(220, 8, 114, 1) 100%
+    var(--color-violet-600) 0%,
+    var(--color-rose-300) 100%
   );
   color: var(--color-white);
   font-size: var(--font-size-xl);
@@ -196,6 +195,32 @@
   margin-top: 17rem;
   height: 85vh;
   width: 100%;
+}
+
+.feedbackContainer {
+  margin-top: 14rem;
+  padding-inline-start: 4rem;
+  padding-inline-end: 2rem;
+}
+
+.feedbackContent {
+  margin-left: 2.8rem;
+}
+
+.feedbackTitle {
+  color: var(--color-gray-100);
+  font-size: var(--font-size-2xl);
+  width: 26rem;
+}
+
+.feedbackSlider {
+  margin-top: 6rem;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1950px) {

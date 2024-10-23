@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
+import PeapleImage from "@/../public/peaple-image.jpeg";
 import {
   ArrowDown,
   Code,
@@ -17,6 +18,9 @@ import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
 import { CardService } from "@/components/CardService";
 import { CardBusinesses } from "@/components/CardBusinesses";
+import { CardFeedback } from "@/components/CardFeedback";
+import { SwiperSlide } from "swiper/react";
+import { Slider } from "@/components/Slider";
 
 export default function Home() {
   return (
@@ -367,6 +371,95 @@ export default function Home() {
         </div>
 
         <div className={styles.imageReinvent}></div>
+
+        <div className={styles.feedbackContainer}>
+          <h2 className={styles.titleCarousel}>Feedbacks</h2>
+          <div className={styles.feedbackContent}>
+            <h1 className={styles.feedbackTitle}>Feedbacks from Our Clients</h1>
+          </div>
+
+          <div className={styles.feedbackSlider}>
+            <Slider>
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className={styles.slide}>
+                  <CardFeedback
+                    image={PeapleImage}
+                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore."
+                    author="John Doe"
+                    stars={5}
+                  />
+                </div>
+              </SwiperSlide>
+            </Slider>
+          </div>
+        </div>
       </section>
     </main>
   );
