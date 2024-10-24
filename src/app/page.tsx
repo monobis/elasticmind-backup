@@ -460,6 +460,78 @@ export default function Home() {
             </Slider>
           </div>
         </div>
+
+        <div className={styles.contactContent}>
+          <header className={styles.headerContact}>
+            <div className={styles.headerContactContainer}>
+              <div className={styles.headerDetailContact}></div>
+              <h1 className={styles.headerTitle}>HOW CAN WE HELP YOU?</h1>
+              <div className={styles.headerDetailContact}></div>
+            </div>
+            <span className={styles.headerDescription}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              eiusmod tempor .
+            </span>
+          </header>
+
+          <form className={styles.formContact}>
+            <div className={styles.buttons}>
+              <div className={styles.buttonsDivisor}>
+                <button className={styles.buttonContact} type="button">
+                  Services
+                </button>
+                <button className={styles.buttonContact} type="button">
+                  Careers
+                </button>
+              </div>
+              <div className={styles.buttonsDivisor}>
+                {" "}
+                <button className={styles.buttonContact} type="button">
+                  Partnerships & Sales
+                </button>
+                <button className={styles.buttonContact} type="button">
+                  Other
+                </button>
+              </div>
+            </div>
+
+            <label className={styles.labelComment} htmlFor="comment">
+              Comment ( optional )
+            </label>
+            <textarea
+              className={styles.comment}
+              name="comment"
+              id="coment"
+              placeholder="Your comment..."
+            ></textarea>
+
+            <div className={styles.checkboxContent}>
+              <input
+                className={styles.checkbox}
+                type="checkbox"
+                id="checkboxPrivacy"
+                name="checkbox"
+              />
+              <label className={styles.checkboxLabel} htmlFor="checkboxPrivacy">
+                I accept your Privacy policy.
+              </label>
+            </div>
+
+            <div className={styles.checkboxContent}>
+              <input
+                className={styles.checkbox}
+                type="checkbox"
+                id="checkboxContact"
+                name="checkbox"
+              />
+              <label className={styles.checkboxLabel} htmlFor="checkboxContact">
+                I agree to be contacted by provided email.
+              </label>
+            </div>
+
+            <button className={styles.buttonSubmit}>Submit</button>
+          </form>
+        </div>
       </section>
     </main>
   );
