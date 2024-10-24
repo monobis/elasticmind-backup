@@ -594,6 +594,15 @@ export default function Home() {
             </button>
           </form>
         </div>
+
+        <div className={styles.blogContent}>
+          <h1 className={styles.blogListTitle}>Blog</h1>
+          <div className={styles.blogList}>
+            <button className={styles.buttonReadMoreBlogs}>
+              Read Full News
+            </button>
+          </div>
+        </div>
       </section>
     </main>
   );
