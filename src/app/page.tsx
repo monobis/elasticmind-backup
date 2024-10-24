@@ -21,8 +21,35 @@ import { CardBusinesses } from "@/components/CardBusinesses";
 import { CardFeedback } from "@/components/CardFeedback";
 import { SwiperSlide } from "swiper/react";
 import { Slider } from "@/components/Slider";
+import { useState, useEffect, FormEvent } from "react";
 
 export default function Home() {
+  const [service, setService] = useState<string>("");
+  const [comment, setComment] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
+
+  function handleChangeService(serviceSelected: string) {
+    if (serviceSelected === service) {
+      setService("");
+    } else {
+      setService(serviceSelected);
+      setErrorMessage("");
+    }
+  }
+
+  useEffect(() => {}, [service]);
+
+  function handleSubmit(e: FormEvent, service: string, comment: string) {
+    e.preventDefault();
+
+    if (service === "") {
+      setErrorMessage("Please select a service.");
+      return;
+    }
+
+    setErrorMessage("");
+    console.log({ service: service, comment: comment });
+  }
   return (
     <main className={styles.container}>
       <Header />
@@ -459,6 +486,113 @@ export default function Home() {
               </SwiperSlide>
             </Slider>
           </div>
+        </div>
+
+        <div className={styles.contactContent}>
+          <header className={styles.headerContact}>
+            <div className={styles.headerContactContainer}>
+              <div className={styles.headerDetailContact}></div>
+              <h1 className={styles.headerTitle}>HOW CAN WE HELP YOU?</h1>
+              <div className={styles.headerDetailContact}></div>
+            </div>
+            <span className={styles.headerDescription}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              eiusmod tempor .
+            </span>
+          </header>
+
+          <form
+            className={styles.formContact}
+            onSubmit={(e: FormEvent) => handleSubmit(e, service, comment)}
+          >
+            <div className={styles.buttons}>
+              <div className={styles.buttonsDivisor}>
+                <button
+                  onClick={() => handleChangeService("Services")}
+                  className={`${styles.buttonContact} ${
+                    service === "Services" && styles.buttonSelected
+                  }`}
+                  type="button"
+                >
+                  Services
+                </button>
+                <button
+                  onClick={() => handleChangeService("Careers")}
+                  className={`${styles.buttonContact} ${
+                    service === "Careers" && styles.buttonSelected
+                  }`}
+                  type="button"
+                >
+                  Careers
+                </button>
+              </div>
+              <div className={styles.buttonsDivisor}>
+                {" "}
+                <button
+                  onClick={() => handleChangeService("Partnerships & Sales")}
+                  className={`${styles.buttonContact} ${
+                    service === "Partnerships & Sales" && styles.buttonSelected
+                  }`}
+                  type="button"
+                >
+                  Partnerships & Sales
+                </button>
+                <button
+                  onClick={() => handleChangeService("Other")}
+                  className={`${styles.buttonContact} ${
+                    service === "Other" && styles.buttonSelected
+                  }`}
+                  type="button"
+                >
+                  Other
+                </button>
+              </div>
+            </div>
+
+            {errorMessage && (
+              <p className={styles.errorMessage}>{errorMessage}</p>
+            )}
+
+            <label className={styles.labelComment} htmlFor="comment">
+              Comment ( optional )
+            </label>
+            <textarea
+              className={styles.comment}
+              name="comment"
+              id="coment"
+              placeholder="Your comment..."
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+            ></textarea>
+
+            <div className={styles.checkboxContent}>
+              <input
+                className={styles.checkbox}
+                type="checkbox"
+                id="checkboxPrivacy"
+                name="checkbox"
+              />
+              <label className={styles.checkboxLabel} htmlFor="checkboxPrivacy">
+                I accept your Privacy policy.
+              </label>
+            </div>
+
+            <div className={styles.checkboxContent}>
+              <input
+                className={styles.checkbox}
+                type="checkbox"
+                id="checkboxContact"
+                name="checkbox"
+              />
+              <label className={styles.checkboxLabel} htmlFor="checkboxContact">
+                I agree to be contacted by provided email.
+              </label>
+            </div>
+
+            <button type="submit" className={styles.buttonSubmit}>
+              Submit
+            </button>
+          </form>
         </div>
       </section>
     </main>
