@@ -21,8 +21,35 @@ import { CardBusinesses } from "@/components/CardBusinesses";
 import { CardFeedback } from "@/components/CardFeedback";
 import { SwiperSlide } from "swiper/react";
 import { Slider } from "@/components/Slider";
+import { useState, useEffect, FormEvent } from "react";
 
 export default function Home() {
+  const [service, setService] = useState<string>("");
+  const [comment, setComment] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
+
+  function handleChangeService(serviceSelected: string) {
+    if (serviceSelected === service) {
+      setService("");
+    } else {
+      setService(serviceSelected);
+      setErrorMessage("");
+    }
+  }
+
+  useEffect(() => {}, [service]);
+
+  function handleSubmit(e: FormEvent, service: string, comment: string) {
+    e.preventDefault();
+
+    if (service === "") {
+      setErrorMessage("Please select a service.");
+      return;
+    }
+
+    setErrorMessage("");
+    console.log({ service: service, comment: comment });
+  }
   return (
     <main className={styles.container}>
       <Header />
@@ -474,26 +501,57 @@ export default function Home() {
             </span>
           </header>
 
-          <form className={styles.formContact}>
+          <form
+            className={styles.formContact}
+            onSubmit={(e: FormEvent) => handleSubmit(e, service, comment)}
+          >
             <div className={styles.buttons}>
               <div className={styles.buttonsDivisor}>
-                <button className={styles.buttonContact} type="button">
+                <button
+                  onClick={() => handleChangeService("Services")}
+                  className={`${styles.buttonContact} ${
+                    service === "Services" && styles.buttonSelected
+                  }`}
+                  type="button"
+                >
                   Services
                 </button>
-                <button className={styles.buttonContact} type="button">
+                <button
+                  onClick={() => handleChangeService("Careers")}
+                  className={`${styles.buttonContact} ${
+                    service === "Careers" && styles.buttonSelected
+                  }`}
+                  type="button"
+                >
                   Careers
                 </button>
               </div>
               <div className={styles.buttonsDivisor}>
                 {" "}
-                <button className={styles.buttonContact} type="button">
+                <button
+                  onClick={() => handleChangeService("Partnerships & Sales")}
+                  className={`${styles.buttonContact} ${
+                    service === "Partnerships & Sales" && styles.buttonSelected
+                  }`}
+                  type="button"
+                >
                   Partnerships & Sales
                 </button>
-                <button className={styles.buttonContact} type="button">
+                <button
+                  onClick={() => handleChangeService("Other")}
+                  className={`${styles.buttonContact} ${
+                    service === "Other" && styles.buttonSelected
+                  }`}
+                  type="button"
+                >
                   Other
                 </button>
               </div>
             </div>
+
+            {errorMessage && (
+              <p className={styles.errorMessage}>{errorMessage}</p>
+            )}
 
             <label className={styles.labelComment} htmlFor="comment">
               Comment ( optional )
@@ -503,6 +561,8 @@ export default function Home() {
               name="comment"
               id="coment"
               placeholder="Your comment..."
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
             ></textarea>
 
             <div className={styles.checkboxContent}>
@@ -529,7 +589,9 @@ export default function Home() {
               </label>
             </div>
 
-            <button className={styles.buttonSubmit}>Submit</button>
+            <button type="submit" className={styles.buttonSubmit}>
+              Submit
+            </button>
           </form>
         </div>
       </section>

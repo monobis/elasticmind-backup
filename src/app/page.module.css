@@ -298,7 +298,18 @@
 }
 
 .buttonContact:hover {
+  background-color: var(--color-rose-200);
+}
+
+.buttonSelected {
   background-color: var(--color-rose-300);
+}
+
+.errorMessage {
+  color: var(--color-red-600);
+  font-size: var(--font-size-sm);
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 .labelComment {
