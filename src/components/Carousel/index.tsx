@@ -5,11 +5,11 @@ import styles from "./styles.module.css";
 import { motion } from "framer-motion";
 import { CardTechnologyPrimary } from "../CardTechnologyPrimary";
 
-interface CarouselProps {
+interface ICarouselProps {
   children: ReactNode;
 }
 
-export function Carousel({ children }: CarouselProps) {
+export function Carousel({ children }: ICarouselProps) {
   const [width, setWidth] = useState<number>(0);
   const carousel = useRef<HTMLDivElement>(null);
 

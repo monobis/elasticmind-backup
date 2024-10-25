@@ -1,9 +1,9 @@
-interface StarIconProps {
+interface IStarIconProps {
   width: number;
   height: number;
 }
 
-export const StarIcon = ({ width, height }: StarIconProps) => (
+export const StarIcon = ({ width, height }: IStarIconProps) => (
   <svg
     width={width}
     height={height}
