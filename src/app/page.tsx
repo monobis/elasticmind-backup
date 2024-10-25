@@ -23,11 +23,13 @@ import { SwiperSlide } from "swiper/react";
 import { Slider } from "@/components/Slider";
 import { useState, useEffect, FormEvent } from "react";
 import { BlogItemList } from "@/components/BlogItemList";
+import BlogBanner from "@/../public/blog-banner.webp";
 
 export default function Home() {
   const [service, setService] = useState<string>("");
   const [comment, setComment] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [showAllBlogs, setShowAllBlogs] = useState(false);
 
   function handleChangeService(serviceSelected: string) {
     if (serviceSelected === service) {
@@ -599,9 +601,75 @@ export default function Home() {
         <div className={styles.blogContent}>
           <h1 className={styles.blogListTitle}>Blog</h1>
           <div className={styles.blogList}>
-            <BlogItemList />
-            <button className={styles.buttonReadMoreBlogs}>
-              Read Full News
+            <BlogItemList
+              image={BlogBanner}
+              title="Latest Blog Posts"
+              description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+          tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+          labore et."
+            />
+
+            <BlogItemList
+              image={BlogBanner}
+              title="Latest Blog Posts"
+              description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+          tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+          labore et."
+            />
+
+            <BlogItemList
+              image={BlogBanner}
+              title="Latest Blog Posts"
+              description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+          tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+          aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
+          amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+          labore et."
+            />
+
+            {showAllBlogs && (
+              <>
+                <BlogItemList
+                  image={BlogBanner}
+                  title="Latest Blog Posts"
+                  description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+            tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+            labore et."
+                />
+
+                <BlogItemList
+                  image={BlogBanner}
+                  title="Latest Blog Posts"
+                  description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+            tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+            labore et."
+                />
+
+                <BlogItemList
+                  image={BlogBanner}
+                  title="Latest Blog Posts"
+                  description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
+            tempor incididunt ut labore et dolore doloremque laudantium, totam rem
+            aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
+            labore et."
+                />
+              </>
+            )}
+
+            <button
+              onClick={() => setShowAllBlogs(!showAllBlogs)}
+              className={styles.buttonReadMoreBlogs}
+            >
+              {showAllBlogs ? "Read Recent Blogs" : "Read More Blogs"}
             </button>
           </div>
         </div>

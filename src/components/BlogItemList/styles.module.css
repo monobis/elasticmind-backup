@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
 }
 
 .imageBanner {
@@ -37,4 +37,10 @@
   background-color: transparent;
   border: none;
   color: var(--color-rose-300);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  color: var(--color-rose-200);
 }
