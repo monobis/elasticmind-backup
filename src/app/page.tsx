@@ -22,6 +22,7 @@ import { CardFeedback } from "@/components/CardFeedback";
 import { SwiperSlide } from "swiper/react";
 import { Slider } from "@/components/Slider";
 import { useState, useEffect, FormEvent } from "react";
+import { BlogItemList } from "@/components/BlogItemList";
 
 export default function Home() {
   const [service, setService] = useState<string>("");
@@ -598,6 +599,7 @@ export default function Home() {
         <div className={styles.blogContent}>
           <h1 className={styles.blogListTitle}>Blog</h1>
           <div className={styles.blogList}>
+            <BlogItemList />
             <button className={styles.buttonReadMoreBlogs}>
               Read Full News
             </button>

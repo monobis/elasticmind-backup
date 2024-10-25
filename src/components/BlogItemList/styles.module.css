@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rem;
+}
+
+.imageBanner {
+  object-fit: cover;
+  border: 3px solid var(--color-gray-300);
+  border-radius: 0.2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: var(--font-size-md);
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: var(--color-rose-300);
+}
