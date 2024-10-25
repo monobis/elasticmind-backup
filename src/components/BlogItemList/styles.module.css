@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 10rem;
 }
 
@@ -13,17 +14,23 @@
 .content {
   display: flex;
   flex-direction: column;
+  margin-left: 5rem;
 }
 
 .title {
   font-size: var(--font-size-xl);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.4rem;
 }
 
 .description {
   font-size: var(--font-size-md);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.4rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: start;
 }
 
 .button {

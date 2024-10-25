@@ -19,9 +19,11 @@ export function BlogItemList() {
           tempor incididunt ut labore et dolore doloremque laudantium, totam rem
           aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
           amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-          labore et
+          labore et.
         </p>
-        <button className={styles.button}>Read More</button>
+        <div className={styles.buttonContainer}>
+          <button className={styles.button}>Read More</button>
+        </div>
       </div>
     </main>
   );
