@@ -13,11 +13,11 @@ import { useEffect, useState } from "react";
 
 register();
 
-interface SwiperProps {
+interface ISwiperProps {
   children: React.ReactNode;
 }
 
-export function Slider({ children }: SwiperProps) {
+export function Slider({ children }: ISwiperProps) {
   const [slidePerView, setSlidePerView] = useState(2);
 
   useEffect(() => {

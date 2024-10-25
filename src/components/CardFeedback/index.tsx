@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import styles from "./styles.module.css";
 import { StarIcon } from "../Icons/StarIcon";
 
-interface CardFeedbackProps {
+interface ICardFeedbackProps {
   image: StaticImageData;
   content: string;
   author: string;
@@ -14,7 +14,7 @@ export function CardFeedback({
   content,
   author,
   stars,
-}: CardFeedbackProps) {
+}: ICardFeedbackProps) {
   return (
     <main className={styles.container}>
       <header className={styles.header}>

@@ -2,13 +2,13 @@ import { ArrowRight } from "react-feather";
 import styles from "./styles.module.css";
 import React from "react";
 
-interface CardServiceProps {
+interface ICardServiceProps {
   title: string;
   description: string;
   Icon: React.ComponentType<{ size?: number | string }>;
 }
 
-export function CardService({ title, description, Icon }: CardServiceProps) {
+export function CardService({ title, description, Icon }: ICardServiceProps) {
   return (
     <main className={styles.container}>
       <div className={styles.header}>
