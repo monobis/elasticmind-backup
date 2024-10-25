@@ -1,0 +1,56 @@
+.containerFooter {
+  display: flex;
+  flex-direction: column;
+  padding-block: 3rem;
+  padding-inline: 4rem;
+  box-shadow: 0 5px 20px var(--color-gray-700);
+}
+
+.contentFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.containerImg {
+  margin-right: 3.3rem;
+  cursor: pointer;
+}
+
+.listLinks {
+  display: flex;
+  list-style: none;
+  font-size: var(--font-size-md);
+}
+
+.listItem {
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.listItem:hover {
+  color: var(--color-rose-200);
+}
+
+.contact {
+  display: flex;
+  margin-top: 12rem;
+  margin-left: 14em;
+}
+
+.containerContactItem {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+
+.titleContact {
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+}
+
+.contactItem {
+  color: var(--color-gray-300);
+  font-size: var(--font-size-md);
+}

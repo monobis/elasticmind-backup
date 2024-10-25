@@ -24,6 +24,7 @@ import { Slider } from "@/components/Slider";
 import { useState, useEffect, FormEvent } from "react";
 import { BlogItemList } from "@/components/BlogItemList";
 import BlogBanner from "@/../public/blog-banner.webp";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   const [service, setService] = useState<string>("");
@@ -672,6 +673,11 @@ export default function Home() {
               {showAllBlogs ? "Read Recent Blogs" : "Read More Blogs"}
             </button>
           </div>
+        </div>
+
+        <div className={styles.footer}>
+          {" "}
+          <Footer />
         </div>
       </section>
     </main>

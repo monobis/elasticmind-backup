@@ -8,10 +8,6 @@
   color: white;
 }
 
-.content {
-  padding-bottom: 5rem;
-}
-
 .centerContent {
   width: 39.56rem;
   margin-top: 10rem;
@@ -442,7 +438,8 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 1750px) {
+.footer {
+  margin-top: 10rem;
 }
 
 @media (max-width: 1950px) {
