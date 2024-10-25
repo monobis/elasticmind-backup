@@ -1,11 +1,11 @@
 import styles from "./styles.module.css";
 
-interface CardBusinessesProps {
+interface ICardBusinessesProps {
   title: string;
   description: string;
 }
 
-export function CardBusinesses({ title, description }: CardBusinessesProps) {
+export function CardBusinesses({ title, description }: ICardBusinessesProps) {
   return (
     <main className={styles.container}>
       <div className={styles.content}>

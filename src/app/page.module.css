@@ -8,9 +8,6 @@
   color: white;
 }
 
-.content {
-  padding-bottom: 5rem;
-}
 .centerContent {
   width: 39.56rem;
   margin-top: 10rem;
@@ -221,6 +218,228 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-violet-600);
+  margin-top: 16rem;
+  padding-block: 8rem;
+}
+
+.headerContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerContactContainer {
+  display: flex;
+  align-items: center;
+}
+
+.headerDetailContact {
+  width: 3.5rem;
+  height: 0.5rem;
+  background-color: var(--color-rose-300);
+}
+
+.headerTitle {
+  color: var(--color-white);
+  font-size: var(--font-size-2xl);
+  text-transform: uppercase;
+  margin-inline: 3.5rem;
+}
+
+.headerDescription {
+  color: var(--color-gray-100);
+  font-size: var(--font-size-md);
+  font-weight: 300;
+}
+
+.formContact {
+  display: flex;
+  flex-direction: column;
+  width: 52%;
+  max-width: 70rem;
+  margin-top: 6rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonsDivisor {
+  width: 48.5%;
+}
+
+.buttonContact {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  font-size: var(--font-size-md);
+  padding: 1rem;
+  padding-inline: 2rem;
+  border-radius: 1.7rem;
+  margin-top: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonContact:hover {
+  background-color: var(--color-rose-200);
+}
+
+.buttonSelected {
+  background-color: var(--color-rose-300);
+}
+
+.errorMessage {
+  color: var(--color-red-600);
+  font-size: var(--font-size-sm);
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.labelComment {
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  margin: 2rem 0 1rem 1rem;
+}
+
+.comment {
+  border: 2px solid var(--color-white);
+  background-color: transparent;
+  border-radius: 1rem;
+  min-height: 13rem;
+  max-height: 30rem;
+  color: var(--color-white);
+  padding: 1rem;
+  resize: vertical;
+  outline-color: var(--color-rose-300);
+  font-size: var(--font-size-sm);
+  margin-bottom: 2.5rem;
+}
+
+.comment::placeholder {
+  color: var(--color-white);
+}
+
+.checkboxContent {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  margin-bottom: 1.6rem;
+  font-size: var(--font-size-md);
+}
+
+.checkbox {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-right: 0.7rem;
+  background-color: transparent;
+  border-radius: 0.1rem;
+  border: 1px solid var(--color-gray-100);
+  margin-right: 1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkbox:checked {
+  background-color: var(--color-rose-300);
+}
+
+.checkbox:checked::before {
+  content: "✔";
+  color: var(--color-white);
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkboxLabel {
+  cursor: pointer;
+}
+
+.checkboxLabel:hover {
+  color: var(--color-rose-300);
+}
+
+.buttonSubmit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-rose-300);
+  color: var(--color-white);
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 1.7rem;
+  border: none;
+  margin-top: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonSubmit:hover {
+  background-color: var(--color-rose-200);
+}
+
+.blogContent {
+  margin-top: 16rem;
+  padding-inline: 6rem;
+}
+
+.blogListTitle {
+  font-size: var(--font-size-2xl);
+  color: var(--color-rose-300);
+  font-weight: bold;
+}
+
+.blogList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.buttonReadMoreBlogs {
+  background: linear-gradient(
+    40deg,
+    var(--color-rose-300) 0%,
+    var(--color-violet-200) 50%,
+    var(--color-violet-300) 45%,
+    var(--color-violet-600) 100%
+  );
+  color: var(--color-white);
+  font-weight: bold;
+  border: none;
+  padding: 1.5rem;
+  padding-inline: 2rem;
+  border-radius: 10rem;
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.buttonReadMoreBlogs:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  margin-top: 10rem;
 }
 
 @media (max-width: 1950px) {
