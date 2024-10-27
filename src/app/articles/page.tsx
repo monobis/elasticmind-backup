@@ -37,7 +37,7 @@ export default function Articles() {
           <button className={styles.buttonReadMore}>Read more</button>
         </div>
 
-        <div className={styles.categoriesContainer}>
+        <section className={styles.categoriesContainer}>
           <div className={styles.categories}>
             {categories.map((category) => (
               <h2
@@ -51,7 +51,20 @@ export default function Articles() {
               </h2>
             ))}
           </div>
-        </div>
+        </section>
+
+        <section className={styles.articlesContainer}>
+          <header className={styles.articlesHeader}>
+            <h1 className={styles.titleArticlesList}>
+              <span className={styles.titleArticlesEmphasis}>ELASTICMIND</span>{" "}
+              article in 2024
+            </h1>
+            <p className={styles.descriptionArticlesHeader}>
+              “Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
+              consectetur, adipisci velit…”
+            </p>
+          </header>
+        </section>
       </section>
 
       <div className={styles.footer}>

@@ -81,6 +81,37 @@
   );
 }
 
+.articlesContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12rem;
+}
+
+.articlesHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleArticlesList {
+  font-size: var(--font-size-2xl);
+  color: var(--color-white);
+  line-height: 5rem;
+}
+
+.titleArticlesEmphasis {
+  text-transform: uppercase;
+}
+
+.descriptionArticlesHeader {
+  display: flex;
+  text-align: center;
+  color: var(--color-gray-100);
+  font-size: var(--font-size-md);
+  font-weight: 300;
+  width: 28rem;
+}
+
 .footer {
-  margin-top: 10rem;
+  margin-top: 30rem;
 }
