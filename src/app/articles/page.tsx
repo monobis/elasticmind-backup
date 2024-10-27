@@ -1,8 +1,22 @@
+"use client";
+
+import { useState } from "react";
 import styles from "./page.module.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 
 export default function Articles() {
+  const [selectedCategory, setSelectedCategory] = useState("ALL ARTICLE");
+
+  const categories = [
+    "ALL ARTICLE",
+    "POPULAR ARTICLE",
+    "LATEST ARTICLE",
+    "ELASTICMIND",
+    "NEWS",
+    "WORLD",
+  ];
+
   return (
     <main>
       <Header />
@@ -21,6 +35,22 @@ export default function Articles() {
           </p>
 
           <button className={styles.buttonReadMore}>Read more</button>
+        </div>
+
+        <div className={styles.categoriesContainer}>
+          <div className={styles.categories}>
+            {categories.map((category) => (
+              <h2
+                key={category}
+                className={`${styles.articleCategory} ${
+                  selectedCategory === category ? styles.articleSelected : ""
+                }`}
+                onClick={() => setSelectedCategory(category)}
+              >
+                {category}
+              </h2>
+            ))}
+          </div>
         </div>
       </section>
 
