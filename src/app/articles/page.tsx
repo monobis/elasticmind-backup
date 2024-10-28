@@ -19,6 +19,77 @@ export default function Articles() {
     "WORLD",
   ];
 
+  const articles = [
+    {
+      image: ArticleImage,
+      sector: "nft",
+      title: "Neque porro quisquam est qui dolorem",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+      author: "John Doe",
+      authorPosition: "CEO",
+      category: "POPULAR ARTICLE",
+    },
+    {
+      image: ArticleImage,
+      sector: "nft",
+      title: "Neque porro quisquam est qui dolorem",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+      author: "John Doe",
+      authorPosition: "CEO",
+      category: "ELASTICMIND",
+    },
+    {
+      image: ArticleImage,
+      sector: "nft",
+      title: "Neque porro quisquam est qui dolorem",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+      author: "John Doe",
+      authorPosition: "CEO",
+      category: "ELASTICMIND",
+    },
+    {
+      image: ArticleImage,
+      sector: "nft",
+      title: "Neque porro quisquam est qui dolorem",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+      author: "John Doe",
+      authorPosition: "CEO",
+      category: "ELASTICMIND",
+    },
+    {
+      image: ArticleImage,
+      sector: "nft",
+      title: "Neque porro quisquam est qui dolorem",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+      author: "John Doe",
+      authorPosition: "CEO",
+      category: "LATEST ARTICLE",
+    },
+    {
+      image: ArticleImage,
+      sector: "nft",
+      title: "Neque porro quisquam est qui dolorem",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+      author: "John Doe",
+      authorPosition: "CEO",
+      category: "POPULAR ARTICLE",
+    },
+  ];
+
+  const filteredArticles =
+    selectedCategory === "ALL ARTICLE"
+      ? articles
+      : articles.filter(
+          (article) =>
+            article.category.toLowerCase() === selectedCategory.toLowerCase()
+        );
+
   return (
     <main>
       <Header />
@@ -68,77 +139,18 @@ export default function Articles() {
           </header>
 
           <section className={styles.articles}>
-            <CardArticle
-              image={ArticleImage}
-              sector="nft"
-              title="Neque porro quisquam est qui dolorem"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
-                        elit. Pellentesque tempus massa ac felis gravida 
-                        eleifend."
-              author="John Doe"
-              authorPosition="CEO"
-              category="allArticles"
-            />
-
-            <CardArticle
-              image={ArticleImage}
-              sector="nft"
-              title="Neque porro quisquam est qui dolorem"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
-                        elit. Pellentesque tempus massa ac felis gravida 
-                        eleifend."
-              author="John Doe"
-              authorPosition="CEO"
-              category="allArticles"
-            />
-
-            <CardArticle
-              image={ArticleImage}
-              sector="nft"
-              title="Neque porro quisquam est qui dolorem"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
-                        elit. Pellentesque tempus massa ac felis gravida 
-                        eleifend."
-              author="John Doe"
-              authorPosition="CEO"
-              category="allArticles"
-            />
-
-            <CardArticle
-              image={ArticleImage}
-              sector="nft"
-              title="Neque porro quisquam est qui dolorem"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
-                        elit. Pellentesque tempus massa ac felis gravida 
-                        eleifend."
-              author="John Doe"
-              authorPosition="CEO"
-              category="allArticles"
-            />
-
-            <CardArticle
-              image={ArticleImage}
-              sector="nft"
-              title="Neque porro quisquam est qui dolorem"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
-                        elit. Pellentesque tempus massa ac felis gravida 
-                        eleifend."
-              author="John Doe"
-              authorPosition="CEO"
-              category="allArticles"
-            />
-
-            <CardArticle
-              image={ArticleImage}
-              sector="nft"
-              title="Neque porro quisquam est qui dolorem"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
-                        elit. Pellentesque tempus massa ac felis gravida 
-                        eleifend."
-              author="John Doe"
-              authorPosition="CEO"
-              category="allArticles"
-            />
+            {filteredArticles.map((article) => (
+              <CardArticle
+                key={article.title}
+                image={article.image}
+                sector={article.sector}
+                title={article.title}
+                description={article.description}
+                author={article.author}
+                authorPosition={article.authorPosition}
+                category={article.category}
+              />
+            ))}
           </section>
         </section>
       </section>
