@@ -112,8 +112,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 5rem;
+  margin-top: 5rem;
+  max-width: 140rem;
 }
 
 .footer {
-  margin-top: 30rem;
+  margin-top: 10rem;
 }

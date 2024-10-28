@@ -79,6 +79,66 @@ export default function Articles() {
               authorPosition="CEO"
               category="allArticles"
             />
+
+            <CardArticle
+              image={ArticleImage}
+              sector="nft"
+              title="Neque porro quisquam est qui dolorem"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit. Pellentesque tempus massa ac felis gravida 
+                        eleifend."
+              author="John Doe"
+              authorPosition="CEO"
+              category="allArticles"
+            />
+
+            <CardArticle
+              image={ArticleImage}
+              sector="nft"
+              title="Neque porro quisquam est qui dolorem"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit. Pellentesque tempus massa ac felis gravida 
+                        eleifend."
+              author="John Doe"
+              authorPosition="CEO"
+              category="allArticles"
+            />
+
+            <CardArticle
+              image={ArticleImage}
+              sector="nft"
+              title="Neque porro quisquam est qui dolorem"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit. Pellentesque tempus massa ac felis gravida 
+                        eleifend."
+              author="John Doe"
+              authorPosition="CEO"
+              category="allArticles"
+            />
+
+            <CardArticle
+              image={ArticleImage}
+              sector="nft"
+              title="Neque porro quisquam est qui dolorem"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit. Pellentesque tempus massa ac felis gravida 
+                        eleifend."
+              author="John Doe"
+              authorPosition="CEO"
+              category="allArticles"
+            />
+
+            <CardArticle
+              image={ArticleImage}
+              sector="nft"
+              title="Neque porro quisquam est qui dolorem"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit. Pellentesque tempus massa ac felis gravida 
+                        eleifend."
+              author="John Doe"
+              authorPosition="CEO"
+              category="allArticles"
+            />
           </section>
         </section>
       </section>
