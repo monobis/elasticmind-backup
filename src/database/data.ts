@@ -1,10 +1,12 @@
 import ArticleImage from "@/../public/immage-tecnology.jpg";
 import { ArticleCategory, IArticles } from "./IData";
+import { randomUUID } from "node:crypto";
 
 export const Priorities = [];
 
 export const articles: IArticles[] = [
   {
+    id: randomUUID(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
@@ -15,6 +17,7 @@ export const articles: IArticles[] = [
     category: ArticleCategory.Latest,
   },
   {
+    id: randomUUID(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
@@ -25,6 +28,7 @@ export const articles: IArticles[] = [
     category: ArticleCategory.Elasticmind,
   },
   {
+    id: randomUUID(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
@@ -35,6 +39,7 @@ export const articles: IArticles[] = [
     category: ArticleCategory.Elasticmind,
   },
   {
+    id: randomUUID(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
@@ -45,6 +50,7 @@ export const articles: IArticles[] = [
     category: ArticleCategory.Elasticmind,
   },
   {
+    id: randomUUID(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
@@ -55,6 +61,7 @@ export const articles: IArticles[] = [
     category: ArticleCategory.Latest,
   },
   {
+    id: randomUUID(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",

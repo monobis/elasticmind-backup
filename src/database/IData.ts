@@ -9,6 +9,7 @@ export enum ArticleCategory {
 }
 
 export interface IArticles {
+  id: string;
   image: StaticImageData;
   sector: string;
   title: string;
