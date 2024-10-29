@@ -13,6 +13,7 @@ import {
   Settings,
   Tool,
 } from "react-feather";
+import { priorities } from "@/database/data";
 import { CardPriority } from "@/components/CardPriority";
 import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
@@ -77,59 +78,17 @@ export default function Home() {
         <div className={styles.carousel}>
           <h2 className={styles.titleCarousel}>Priorities</h2>
           <Carousel key="carousel-priorities">
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
+            {priorities.map((priority) => (
+              <motion.div key={priority.id} className={styles.containerCard}>
+                <div className={styles.card}>
+                  <CardPriority
+                    category={priority.category}
+                    title={priority.title}
+                    listDescription={priority.listDescription}
+                  />
+                </div>
+              </motion.div>
+            ))}
           </Carousel>
         </div>
 

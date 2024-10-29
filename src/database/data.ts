@@ -1,8 +1,104 @@
 import ArticleImage from "@/../public/immage-tecnology.jpg";
-import { ArticleCategory, IArticles } from "./IData";
-import { randomUUID } from "node:crypto";
+import { ArticleCategory, IArticles, IPriorities } from "./IData";
+import { randomUUID } from "crypto";
 
-export const Priorities = [];
+export const priorities: IPriorities[] = [
+  {
+    id: randomUUID(),
+    category: "To nurture",
+    title: "professional growth",
+    listDescription: [
+      "Culture of self-development",
+      "Time for skill-up as part of the schedule",
+      "Internal and external knowledge-sharing",
+      "Contribution to open-source",
+    ],
+  },
+
+  {
+    id: randomUUID(),
+    category: "To nurture",
+    title: "professional growth",
+    listDescription: [
+      "Culture of self-development",
+      "Time for skill-up as part of the schedule",
+      "Internal and external knowledge-sharing",
+      "Contribution to open-source",
+    ],
+  },
+
+  {
+    id: randomUUID(),
+    category: "To nurture",
+    title: "professional growth",
+    listDescription: [
+      "Culture of self-development",
+      "Time for skill-up as part of the schedule",
+      "Internal and external knowledge-sharing",
+      "Contribution to open-source",
+    ],
+  },
+
+  {
+    id: randomUUID(),
+    category: "To nurture",
+    title: "professional growth",
+    listDescription: [
+      "Culture of self-development",
+      "Time for skill-up as part of the schedule",
+      "Internal and external knowledge-sharing",
+      "Contribution to open-source",
+    ],
+  },
+
+  {
+    id: randomUUID(),
+    category: "To nurture",
+    title: "professional growth",
+    listDescription: [
+      "Culture of self-development",
+      "Time for skill-up as part of the schedule",
+      "Internal and external knowledge-sharing",
+      "Contribution to open-source",
+    ],
+  },
+
+  {
+    id: randomUUID(),
+    category: "To nurture",
+    title: "professional growth",
+    listDescription: [
+      "Culture of self-development",
+      "Time for skill-up as part of the schedule",
+      "Internal and external knowledge-sharing",
+      "Contribution to open-source",
+    ],
+  },
+
+  {
+    id: randomUUID(),
+    category: "To nurture",
+    title: "professional growth",
+    listDescription: [
+      "Culture of self-development",
+      "Time for skill-up as part of the schedule",
+      "Internal and external knowledge-sharing",
+      "Contribution to open-source",
+    ],
+  },
+
+  {
+    id: randomUUID(),
+    category: "To nurture",
+    title: "professional growth",
+    listDescription: [
+      "Culture of self-development",
+      "Time for skill-up as part of the schedule",
+      "Internal and external knowledge-sharing",
+      "Contribution to open-source",
+    ],
+  },
+];
 
 export const articles: IArticles[] = [
   {

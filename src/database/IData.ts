@@ -1,5 +1,12 @@
 import { StaticImageData } from "next/image";
 
+export interface IPriorities {
+  id: string;
+  category: string;
+  title: string;
+  listDescription: string[];
+}
+
 export enum ArticleCategory {
   Popular = "POPULAR ARTICLE",
   Elasticmind = "ELASTICMIND",
