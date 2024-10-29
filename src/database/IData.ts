@@ -46,3 +46,10 @@ export interface IFeedback {
   author: string;
   stars: number;
 }
+
+export interface IBlogPost {
+  id: string;
+  image: StaticImageData;
+  title: string;
+  description: string;
+}

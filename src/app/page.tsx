@@ -13,7 +13,13 @@ import {
   Settings,
   Tool,
 } from "react-feather";
-import { businesses, feedbacks, priorities, services } from "@/database/data";
+import {
+  blogPosts,
+  businesses,
+  feedbacks,
+  priorities,
+  services,
+} from "@/database/data";
 import { CardPriority } from "@/components/CardPriority";
 import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
@@ -24,7 +30,6 @@ import { SwiperSlide } from "swiper/react";
 import { Slider } from "@/components/Slider";
 import { useState, useEffect, FormEvent } from "react";
 import { BlogItemList } from "@/components/BlogItemList";
-import BlogBanner from "@/../public/blog-banner.webp";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -349,69 +354,16 @@ export default function Home() {
         <div className={styles.blogContent}>
           <h1 className={styles.blogListTitle}>Blog</h1>
           <div className={styles.blogList}>
-            <BlogItemList
-              image={BlogBanner}
-              title="Latest Blog Posts"
-              description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-          tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-          labore et."
-            />
-
-            <BlogItemList
-              image={BlogBanner}
-              title="Latest Blog Posts"
-              description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-          tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-          labore et."
-            />
-
-            <BlogItemList
-              image={BlogBanner}
-              title="Latest Blog Posts"
-              description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-          tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-          labore et."
-            />
-
-            {showAllBlogs && (
-              <>
+            {blogPosts
+              .slice(0, showAllBlogs ? blogPosts.length : 3)
+              .map((post) => (
                 <BlogItemList
-                  image={BlogBanner}
-                  title="Latest Blog Posts"
-                  description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-            tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-            labore et."
+                  key={post.id}
+                  image={post.image}
+                  title={post.title}
+                  description={post.description}
                 />
-
-                <BlogItemList
-                  image={BlogBanner}
-                  title="Latest Blog Posts"
-                  description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-            tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-            labore et."
-                />
-
-                <BlogItemList
-                  image={BlogBanner}
-                  title="Latest Blog Posts"
-                  description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-            tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-            labore et."
-                />
-              </>
-            )}
+              ))}
 
             <button
               onClick={() => setShowAllBlogs(!showAllBlogs)}

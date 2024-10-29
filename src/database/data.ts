@@ -1,8 +1,10 @@
 import ArticleImage from "@/../public/immage-tecnology.jpg";
 import PeapleImage from "@/../public/peaple-image.jpeg";
+import BlogBanner from "@/../public/blog-banner.webp";
 import {
   ArticleCategory,
   IArticle,
+  IBlogPost,
   IBusiness,
   IFeedback,
   IPriority,
@@ -316,5 +318,55 @@ export const feedbacks: IFeedback[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
     author: "John Doe",
     stars: 5,
+  },
+];
+
+export const blogPosts: IBlogPost[] = [
+  {
+    id: uuidv4(),
+    image: BlogBanner,
+    title: "Latest Blog Posts",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et.",
+  },
+
+  {
+    id: uuidv4(),
+    image: BlogBanner,
+    title: "Latest Blog Posts",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et.",
+  },
+
+  {
+    id: uuidv4(),
+    image: BlogBanner,
+    title: "Latest Blog Posts",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et.",
+  },
+
+  {
+    id: uuidv4(),
+    image: BlogBanner,
+    title: "Latest Blog Posts",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et.",
+  },
+
+  {
+    id: uuidv4(),
+    image: BlogBanner,
+    title: "Latest Blog Posts",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et.",
+  },
+
+  {
+    id: uuidv4(),
+    image: BlogBanner,
+    title: "Latest Blog Posts",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et.",
   },
 ];
