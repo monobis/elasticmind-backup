@@ -1,5 +1,11 @@
 import ArticleImage from "@/../public/immage-tecnology.jpg";
-import { ArticleCategory, IArticle, IPriority, IService } from "./IData";
+import {
+  ArticleCategory,
+  IArticle,
+  IBusiness,
+  IPriority,
+  IService,
+} from "./IData";
 import { v4 as uuidv4 } from "uuid";
 import {
   ArrowDown,
@@ -220,5 +226,46 @@ export const services: IService[] = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
     Icon: Grid,
+  },
+];
+
+export const businesses: IBusiness[] = [
+  {
+    id: uuidv4(),
+    title: "Startups",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
+  },
+  {
+    id: uuidv4(),
+    title: "Enterprises",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
+  },
+
+  {
+    id: uuidv4(),
+    title: "Small to medium",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
+  },
+  {
+    id: uuidv4(),
+    title: "Startups",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
+  },
+  {
+    id: uuidv4(),
+    title: "Enterprises",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
+  },
+
+  {
+    id: uuidv4(),
+    title: "Small to medium",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
   },
 ];

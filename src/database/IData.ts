@@ -32,3 +32,9 @@ export interface IService {
   description: string;
   Icon: React.ComponentType<{ size?: number | string }>;
 }
+
+export interface IBusiness {
+  id: string;
+  title: string;
+  description: string;
+}
