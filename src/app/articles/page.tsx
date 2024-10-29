@@ -20,6 +20,8 @@ export default function Articles() {
     "WORLD",
   ];
 
+  console.log(articles);
+
   const filteredArticles =
     selectedCategory === "ALL ARTICLE"
       ? articles
@@ -50,9 +52,9 @@ export default function Articles() {
 
         <section className={styles.categoriesContainer}>
           <div className={styles.categories}>
-            {categories.map((category) => (
+            {categories.map((category, index) => (
               <h2
-                key={category}
+                key={index}
                 className={`${styles.articleCategory} ${
                   selectedCategory === category ? styles.articleSelected : ""
                 }`}
@@ -79,7 +81,7 @@ export default function Articles() {
           <section className={styles.articles}>
             {filteredArticles.map((article) => (
               <CardArticle
-                key={article.title}
+                key={article.id}
                 image={article.image}
                 sector={article.sector}
                 title={article.title}

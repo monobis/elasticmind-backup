@@ -20,6 +20,7 @@ export interface IArticle {
   image: StaticImageData;
   sector: string;
   title: string;
+  subtitle?: string;
   description: string;
   author: string;
   authorPosition: string;
