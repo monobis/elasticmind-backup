@@ -1,8 +1,10 @@
 import ArticleImage from "@/../public/immage-tecnology.jpg";
+import PeapleImage from "@/../public/peaple-image.jpeg";
 import {
   ArticleCategory,
   IArticle,
   IBusiness,
+  IFeedback,
   IPriority,
   IService,
 } from "./IData";
@@ -267,5 +269,52 @@ export const businesses: IBusiness[] = [
     title: "Small to medium",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
+  },
+];
+
+export const feedbacks: IFeedback[] = [
+  {
+    id: uuidv4(),
+    image: PeapleImage,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
+    author: "John Doe",
+    stars: 5,
+  },
+
+  {
+    id: uuidv4(),
+    image: PeapleImage,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
+    author: "John Doe",
+    stars: 5,
+  },
+
+  {
+    id: uuidv4(),
+    image: PeapleImage,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
+    author: "John Doe",
+    stars: 5,
+  },
+
+  {
+    id: uuidv4(),
+    image: PeapleImage,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
+    author: "John Doe",
+    stars: 5,
+  },
+
+  {
+    id: uuidv4(),
+    image: PeapleImage,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
+    author: "John Doe",
+    stars: 5,
   },
 ];

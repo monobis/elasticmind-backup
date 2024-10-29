@@ -13,7 +13,7 @@ import {
   Settings,
   Tool,
 } from "react-feather";
-import { businesses, priorities, services } from "@/database/data";
+import { businesses, feedbacks, priorities, services } from "@/database/data";
 import { CardPriority } from "@/components/CardPriority";
 import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
@@ -223,83 +223,18 @@ export default function Home() {
 
           <div className={styles.feedbackSlider}>
             <Slider>
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
+              {feedbacks.map((feedback) => (
+                <SwiperSlide key={feedback.id}>
+                  <div className={styles.slide}>
+                    <CardFeedback
+                      image={feedback.image}
+                      description={feedback.description}
+                      author={feedback.author}
+                      stars={feedback.stars}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
             </Slider>
           </div>
         </div>

@@ -38,3 +38,11 @@ export interface IBusiness {
   title: string;
   description: string;
 }
+
+export interface IFeedback {
+  id: string;
+  image: StaticImageData;
+  description: string;
+  author: string;
+  stars: number;
+}
