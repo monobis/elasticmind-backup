@@ -1,10 +1,10 @@
 import ArticleImage from "@/../public/immage-tecnology.jpg";
 import { ArticleCategory, IArticles, IPriorities } from "./IData";
-import { randomUUID } from "crypto";
+import { v4 as uuidv4 } from "uuid";
 
 export const priorities: IPriorities[] = [
   {
-    id: randomUUID(),
+    id: uuidv4(),
     category: "To nurture",
     title: "professional growth",
     listDescription: [
@@ -16,7 +16,7 @@ export const priorities: IPriorities[] = [
   },
 
   {
-    id: randomUUID(),
+    id: uuidv4(),
     category: "To nurture",
     title: "professional growth",
     listDescription: [
@@ -28,7 +28,7 @@ export const priorities: IPriorities[] = [
   },
 
   {
-    id: randomUUID(),
+    id: uuidv4(),
     category: "To nurture",
     title: "professional growth",
     listDescription: [
@@ -40,7 +40,7 @@ export const priorities: IPriorities[] = [
   },
 
   {
-    id: randomUUID(),
+    id: uuidv4(),
     category: "To nurture",
     title: "professional growth",
     listDescription: [
@@ -52,7 +52,7 @@ export const priorities: IPriorities[] = [
   },
 
   {
-    id: randomUUID(),
+    id: uuidv4(),
     category: "To nurture",
     title: "professional growth",
     listDescription: [
@@ -64,7 +64,7 @@ export const priorities: IPriorities[] = [
   },
 
   {
-    id: randomUUID(),
+    id: uuidv4(),
     category: "To nurture",
     title: "professional growth",
     listDescription: [
@@ -76,7 +76,7 @@ export const priorities: IPriorities[] = [
   },
 
   {
-    id: randomUUID(),
+    id: uuidv4(),
     category: "To nurture",
     title: "professional growth",
     listDescription: [
@@ -88,7 +88,7 @@ export const priorities: IPriorities[] = [
   },
 
   {
-    id: randomUUID(),
+    id: uuidv4(),
     category: "To nurture",
     title: "professional growth",
     listDescription: [
@@ -102,7 +102,7 @@ export const priorities: IPriorities[] = [
 
 export const articles: IArticles[] = [
   {
-    id: randomUUID(),
+    id: uuidv4(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
@@ -113,7 +113,7 @@ export const articles: IArticles[] = [
     category: ArticleCategory.Latest,
   },
   {
-    id: randomUUID(),
+    id: uuidv4(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
@@ -124,7 +124,7 @@ export const articles: IArticles[] = [
     category: ArticleCategory.Elasticmind,
   },
   {
-    id: randomUUID(),
+    id: uuidv4(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
@@ -135,7 +135,7 @@ export const articles: IArticles[] = [
     category: ArticleCategory.Elasticmind,
   },
   {
-    id: randomUUID(),
+    id: uuidv4(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
@@ -146,7 +146,7 @@ export const articles: IArticles[] = [
     category: ArticleCategory.Elasticmind,
   },
   {
-    id: randomUUID(),
+    id: uuidv4(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
@@ -157,7 +157,7 @@ export const articles: IArticles[] = [
     category: ArticleCategory.Latest,
   },
   {
-    id: randomUUID(),
+    id: uuidv4(),
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",

@@ -10,6 +10,7 @@ interface ICardPriorityProps {
 export function CardPriority({
   category,
   title,
+
   listDescription,
 }: ICardPriorityProps) {
   return (
