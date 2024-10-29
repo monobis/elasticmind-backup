@@ -1,7 +1,21 @@
 .content {
   display: flex;
   justify-content: center;
-  height: 100vh;
+}
+
+.articleContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 10%;
+  margin-top: 5rem;
+  color: var(--color-gray-300);
+  font-size: var(--font-size-md);
+  font-weight: 400;
+}
+
+.articleParagraph {
+  margin-bottom: 1.5rem;
 }
 
 .footer {
