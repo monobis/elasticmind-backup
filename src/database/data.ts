@@ -1,8 +1,17 @@
 import ArticleImage from "@/../public/immage-tecnology.jpg";
-import { ArticleCategory, IArticles, IPriorities } from "./IData";
+import { ArticleCategory, IArticle, IPriority, IService } from "./IData";
 import { v4 as uuidv4 } from "uuid";
+import {
+  ArrowDown,
+  Code,
+  Figma,
+  Grid,
+  Search,
+  Settings,
+  Tool,
+} from "react-feather";
 
-export const priorities: IPriorities[] = [
+export const priorities: IPriority[] = [
   {
     id: uuidv4(),
     category: "To nurture",
@@ -100,7 +109,7 @@ export const priorities: IPriorities[] = [
   },
 ];
 
-export const articles: IArticles[] = [
+export const articles: IArticle[] = [
   {
     id: uuidv4(),
     image: ArticleImage,
@@ -166,5 +175,50 @@ export const articles: IArticles[] = [
     author: "John Doe",
     authorPosition: "CEO",
     category: ArticleCategory.Popular,
+  },
+];
+
+export const services: IService[] = [
+  {
+    id: uuidv4(),
+    title: "Design",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
+    Icon: Figma,
+  },
+  {
+    id: uuidv4(),
+    title: "Software Engineering",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
+    Icon: Code,
+  },
+  {
+    id: uuidv4(),
+    title: "Quality Assurance",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
+    Icon: Search,
+  },
+  {
+    id: uuidv4(),
+    title: "DevOps",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
+    Icon: Settings,
+  },
+  {
+    id: uuidv4(),
+    title: "Support & Maintenance",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
+    Icon: Tool,
+  },
+  {
+    id: uuidv4(),
+    title: "Project Management",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
+    Icon: Grid,
   },
 ];

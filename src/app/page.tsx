@@ -13,7 +13,7 @@ import {
   Settings,
   Tool,
 } from "react-feather";
-import { priorities } from "@/database/data";
+import { priorities, services } from "@/database/data";
 import { CardPriority } from "@/components/CardPriority";
 import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
@@ -171,41 +171,14 @@ export default function Home() {
         </div>
 
         <div className={styles.services}>
-          <CardService
-            title="Design"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Figma}
-          />
-
-          <CardService
-            title="Software Engineering"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Code}
-          />
-
-          <CardService
-            title="Quality Assurance"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Search}
-          />
-
-          <CardService
-            title="DevOps"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Settings}
-          />
-
-          <CardService
-            title="Support & Maintenance"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Tool}
-          />
-
-          <CardService
-            title="Project Management"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Grid}
-          />
+          {services.map((service) => (
+            <CardService
+              key={service.id}
+              title={service.title}
+              description={service.description}
+              Icon={service.Icon}
+            />
+          ))}
         </div>
 
         <div className={styles.businesses}>

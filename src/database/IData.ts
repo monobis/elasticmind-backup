@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-export interface IPriorities {
+export interface IPriority {
   id: string;
   category: string;
   title: string;
@@ -15,7 +15,7 @@ export enum ArticleCategory {
   world = "WORLD",
 }
 
-export interface IArticles {
+export interface IArticle {
   id: string;
   image: StaticImageData;
   sector: string;
@@ -24,4 +24,11 @@ export interface IArticles {
   author: string;
   authorPosition: string;
   category: ArticleCategory;
+}
+
+export interface IService {
+  id: string;
+  title: string;
+  description: string;
+  Icon: React.ComponentType<{ size?: number | string }>;
 }
