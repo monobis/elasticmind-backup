@@ -1,6 +1,9 @@
 import Image from "next/image";
 import LogoHeaderWhite from "@/../public/logo-header-white.svg";
 import styles from "./style.module.css";
+import { handleScrollToSection } from "@/utils/scrollUtils";
+
+
 
 export function Header() {
   return (
@@ -12,16 +15,46 @@ export function Header() {
 
         <div className={styles.containerListLinks}>
           <ul className={styles.listLinks}>
-            <li className={styles.listItem}>For Clients</li>
-            <li className={styles.listItem}>Services</li>
-            <li className={styles.listItem}>Portfolio</li>
-            <li className={styles.listItem}>Careers</li>
-            <li className={styles.listItem}>Blog</li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("clients")}
+            >
+              For Clients
+            </li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("services")}
+            >
+              Services
+            </li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("portfolio")}
+            >
+              Portfolio
+            </li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("careers")}
+            >
+              Careers
+            </li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("blog")}
+            >
+              Blog
+            </li>
           </ul>
         </div>
       </section>
       <section className={styles.rightContent}>
-        <button className={styles.button}>Get in touch</button>
+        <button
+          className={styles.button}
+          onClick={() => handleScrollToSection("contact")}
+        >
+          Get in touch
+        </button>
       </section>
     </header>
   );

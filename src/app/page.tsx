@@ -3,16 +3,7 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
-import PeapleImage from "@/../public/peaple-image.jpeg";
-import {
-  ArrowDown,
-  Code,
-  Figma,
-  Grid,
-  Search,
-  Settings,
-  Tool,
-} from "react-feather";
+import { ArrowDown } from "react-feather";
 import {
   blogPosts,
   businesses,
@@ -31,6 +22,7 @@ import { Slider } from "@/components/Slider";
 import { useState, useEffect, FormEvent } from "react";
 import { BlogItemList } from "@/components/BlogItemList";
 import { Footer } from "@/components/Footer";
+import { handleScrollToSection } from "@/utils/scrollUtils";
 
 export default function Home() {
   const [service, setService] = useState<string>("");
@@ -60,6 +52,7 @@ export default function Home() {
     setErrorMessage("");
     console.log({ service: service, comment: comment });
   }
+
   return (
     <main className={styles.container}>
       <Header />
@@ -74,13 +67,16 @@ export default function Home() {
             with the blend of the brightest technological minds and edge
             technologies.
           </p>
-          <button className={styles.buttonReview}>
+          <button
+            className={styles.buttonReview}
+            onClick={() => handleScrollToSection("tech")}
+          >
             <span className={styles.textButton}>Review our tech stack</span>{" "}
             <ArrowDown size={20} />
           </button>
         </div>
 
-        <div className={styles.carousel}>
+        <div id="clients" className={styles.carousel}>
           <h2 className={styles.titleCarousel}>Priorities</h2>
           <Carousel key="carousel-priorities">
             {priorities.map((priority) => (
@@ -147,7 +143,7 @@ export default function Home() {
           </Carousel>
         </div>
 
-        <div className={styles.ourServices}>
+        <div id="services" className={styles.ourServices}>
           <h2 className={styles.titleCarousel}>Priorities</h2>
           <div className={styles.ourServicesContent}>
             <h1 className={styles.ourServicesTitle}>
@@ -175,7 +171,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.services}>
+        <div id="tech" className={styles.services}>
           {services.map((service) => (
             <CardService
               key={service.id}
@@ -186,7 +182,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className={styles.businesses}>
+        <div id="portfolio" className={styles.businesses}>
           <h2 className={styles.titleCarousel}>Businesses</h2>
           <div className={styles.businessesContent}>
             {" "}
@@ -218,7 +214,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.imageReinvent}></div>
+        <div id="careers" className={styles.imageReinvent}></div>
 
         <div className={styles.feedbackContainer}>
           <h2 className={styles.titleCarousel}>Feedbacks</h2>
@@ -226,7 +222,7 @@ export default function Home() {
             <h1 className={styles.feedbackTitle}>Feedbacks from Our Clients</h1>
           </div>
 
-          <div className={styles.feedbackSlider}>
+          <div id="blog" className={styles.feedbackSlider}>
             <Slider>
               {feedbacks.map((feedback) => (
                 <SwiperSlide key={feedback.id}>
@@ -244,7 +240,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className={styles.contactContent}>
+        <div id="contact" className={styles.contactContent}>
           <header className={styles.headerContact}>
             <div className={styles.headerContactContainer}>
               <div className={styles.headerDetailContact}></div>
