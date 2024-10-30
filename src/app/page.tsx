@@ -13,6 +13,13 @@ import {
   Settings,
   Tool,
 } from "react-feather";
+import {
+  blogPosts,
+  businesses,
+  feedbacks,
+  priorities,
+  services,
+} from "@/database/data";
 import { CardPriority } from "@/components/CardPriority";
 import { CardTechnologyPrimary } from "@/components/CardTechnologyPrimary";
 import { CardTechnologySecondary } from "@/components/CardTechnologySecondary";
@@ -23,7 +30,6 @@ import { SwiperSlide } from "swiper/react";
 import { Slider } from "@/components/Slider";
 import { useState, useEffect, FormEvent } from "react";
 import { BlogItemList } from "@/components/BlogItemList";
-import BlogBanner from "@/../public/blog-banner.webp";
 import { Footer } from "@/components/Footer";
 
 export default function Home() {
@@ -77,59 +83,17 @@ export default function Home() {
         <div className={styles.carousel}>
           <h2 className={styles.titleCarousel}>Priorities</h2>
           <Carousel key="carousel-priorities">
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
-
-            <motion.div className={styles.containerCard}>
-              <div className={styles.card}>
-                <CardPriority />
-              </div>
-            </motion.div>
+            {priorities.map((priority) => (
+              <motion.div key={priority.id} className={styles.containerCard}>
+                <div className={styles.card}>
+                  <CardPriority
+                    category={priority.category}
+                    title={priority.title}
+                    listDescription={priority.listDescription}
+                  />
+                </div>
+              </motion.div>
+            ))}
           </Carousel>
         </div>
 
@@ -212,41 +176,14 @@ export default function Home() {
         </div>
 
         <div className={styles.services}>
-          <CardService
-            title="Design"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Figma}
-          />
-
-          <CardService
-            title="Software Engineering"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Code}
-          />
-
-          <CardService
-            title="Quality Assurance"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Search}
-          />
-
-          <CardService
-            title="DevOps"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Settings}
-          />
-
-          <CardService
-            title="Support & Maintenance"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Tool}
-          />
-
-          <CardService
-            title="Project Management"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud"
-            Icon={Grid}
-          />
+          {services.map((service) => (
+            <CardService
+              key={service.id}
+              title={service.title}
+              description={service.description}
+              Icon={service.Icon}
+            />
+          ))}
         </div>
 
         <div className={styles.businesses}>
@@ -264,139 +201,19 @@ export default function Home() {
               </span>
             </p>
             <Carousel key="carousel-businesses">
-              <motion.div className={styles.containerCardBusinesses}>
-                <div className={styles.card}>
-                  <CardBusinesses
-                    title="Startups"
-                    description="Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              eiusmod tempor incididunt ut labore 
-              et dolore doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae 
-              ab illo inventore"
-                  />
-                </div>
-              </motion.div>
-              <motion.div className={styles.containerCardBusinesses}>
-                <div className={styles.card}>
-                  <CardBusinesses
-                    title="Enterprises"
-                    description="Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              eiusmod tempor incididunt ut labore 
-              et dolore doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae 
-              ab illo inventore"
-                  />
-                </div>
-              </motion.div>
-              <motion.div className={styles.containerCardBusinesses}>
-                <div className={styles.card}>
-                  <CardBusinesses
-                    title="Small to medium"
-                    description="Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              eiusmod tempor incididunt ut labore 
-              et dolore doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae 
-              ab illo inventore"
-                  />
-                </div>
-              </motion.div>
-              <motion.div className={styles.containerCardBusinesses}>
-                <div className={styles.card}>
-                  <CardBusinesses
-                    title="Startups"
-                    description="Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              eiusmod tempor incididunt ut labore 
-              et dolore doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae 
-              ab illo inventore"
-                  />
-                </div>
-              </motion.div>
-              <motion.div className={styles.containerCardBusinesses}>
-                <div className={styles.card}>
-                  <CardBusinesses
-                    title="Enterprises"
-                    description="Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              eiusmod tempor incididunt ut labore 
-              et dolore doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae 
-              ab illo inventore"
-                  />
-                </div>
-              </motion.div>
-
-              <motion.div className={styles.containerCardBusinesses}>
-                <div className={styles.card}>
-                  <CardBusinesses
-                    title="Small to medium"
-                    description="Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              eiusmod tempor incididunt ut labore 
-              et dolore doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae 
-              ab illo inventore"
-                  />
-                </div>
-              </motion.div>
-
-              <motion.div className={styles.containerCardBusinesses}>
-                <div className={styles.card}>
-                  <CardBusinesses
-                    title="Startups"
-                    description="Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              eiusmod tempor incididunt ut labore 
-              et dolore doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae 
-              ab illo inventore"
-                  />
-                </div>
-              </motion.div>
-              <motion.div className={styles.containerCardBusinesses}>
-                <div className={styles.card}>
-                  <CardBusinesses
-                    title="Enterprises"
-                    description="Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              eiusmod tempor incididunt ut labore 
-              et dolore doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae 
-              ab illo inventore"
-                  />
-                </div>
-              </motion.div>
-              <motion.div className={styles.containerCardBusinesses}>
-                <div className={styles.card}>
-                  <CardBusinesses
-                    title="Small to medium"
-                    description="Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              eiusmod tempor incididunt ut labore 
-              et dolore doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae 
-              ab illo inventore"
-                  />
-                </div>
-              </motion.div>
-
-              <motion.div className={styles.containerCardBusinesses}>
-                <div className={styles.card}>
-                  <CardBusinesses
-                    title="Startups"
-                    description="Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, sed 
-              eiusmod tempor incididunt ut labore 
-              et dolore doloremque laudantium, 
-              totam rem aperiam, eaque ipsa quae 
-              ab illo inventore"
-                  />
-                </div>
-              </motion.div>
+              {businesses.map((business) => (
+                <motion.div
+                  key={business.id}
+                  className={styles.containerCardBusinesses}
+                >
+                  <div className={styles.card}>
+                    <CardBusinesses
+                      title={business.title}
+                      description={business.description}
+                    />
+                  </div>
+                </motion.div>
+              ))}
             </Carousel>
           </div>
         </div>
@@ -411,83 +228,18 @@ export default function Home() {
 
           <div className={styles.feedbackSlider}>
             <Slider>
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={styles.slide}>
-                  <CardFeedback
-                    image={PeapleImage}
-                    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-        tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore."
-                    author="John Doe"
-                    stars={5}
-                  />
-                </div>
-              </SwiperSlide>
+              {feedbacks.map((feedback) => (
+                <SwiperSlide key={feedback.id}>
+                  <div className={styles.slide}>
+                    <CardFeedback
+                      image={feedback.image}
+                      description={feedback.description}
+                      author={feedback.author}
+                      stars={feedback.stars}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
             </Slider>
           </div>
         </div>
@@ -602,69 +354,16 @@ export default function Home() {
         <div className={styles.blogContent}>
           <h1 className={styles.blogListTitle}>Blog</h1>
           <div className={styles.blogList}>
-            <BlogItemList
-              image={BlogBanner}
-              title="Latest Blog Posts"
-              description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-          tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-          labore et."
-            />
-
-            <BlogItemList
-              image={BlogBanner}
-              title="Latest Blog Posts"
-              description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-          tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-          labore et."
-            />
-
-            <BlogItemList
-              image={BlogBanner}
-              title="Latest Blog Posts"
-              description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-          tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-          aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-          labore et."
-            />
-
-            {showAllBlogs && (
-              <>
+            {blogPosts
+              .slice(0, showAllBlogs ? blogPosts.length : 3)
+              .map((post) => (
                 <BlogItemList
-                  image={BlogBanner}
-                  title="Latest Blog Posts"
-                  description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-            tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-            labore et."
+                  key={post.id}
+                  image={post.image}
+                  title={post.title}
+                  description={post.description}
                 />
-
-                <BlogItemList
-                  image={BlogBanner}
-                  title="Latest Blog Posts"
-                  description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-            tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-            labore et."
-                />
-
-                <BlogItemList
-                  image={BlogBanner}
-                  title="Latest Blog Posts"
-                  description=" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod
-            tempor incididunt ut labore et dolore doloremque laudantium, totam rem
-            aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut
-            labore et."
-                />
-              </>
-            )}
+              ))}
 
             <button
               onClick={() => setShowAllBlogs(!showAllBlogs)}

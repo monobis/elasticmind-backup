@@ -4,14 +4,14 @@ import { StarIcon } from "../Icons/StarIcon";
 
 interface ICardFeedbackProps {
   image: StaticImageData;
-  content: string;
+  description: string;
   author: string;
   stars: number;
 }
 
 export function CardFeedback({
   image,
-  content,
+  description,
   author,
   stars,
 }: ICardFeedbackProps) {
@@ -26,7 +26,7 @@ export function CardFeedback({
           className={styles.clientImage}
         />
       </header>
-      <p className={styles.content}>"{content}"</p>
+      <p className={styles.content}>"{description}"</p>
       <div className={styles.assessment}>
         <div className={styles.assessmentContent}>
           <span className={styles.author}>{author}</span>
