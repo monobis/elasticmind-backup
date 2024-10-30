@@ -1,11 +1,11 @@
 "use client";
-
 import { useState } from "react";
 import styles from "./page.module.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { CardArticle } from "@/components/CardArticle";
-import ArticleImage from "@/../public/immage-tecnology.jpg";
+import { articles } from "@/database/data";
+import { handleScrollToSection } from "@/utils/scrollUtils";
 
 export default function Articles() {
   const [selectedCategory, setSelectedCategory] = useState("ALL ARTICLE");
@@ -17,69 +17,6 @@ export default function Articles() {
     "ELASTICMIND",
     "NEWS",
     "WORLD",
-  ];
-
-  const articles = [
-    {
-      image: ArticleImage,
-      sector: "nft",
-      title: "Neque porro quisquam est qui dolorem",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
-      author: "John Doe",
-      authorPosition: "CEO",
-      category: "POPULAR ARTICLE",
-    },
-    {
-      image: ArticleImage,
-      sector: "nft",
-      title: "Neque porro quisquam est qui dolorem",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
-      author: "John Doe",
-      authorPosition: "CEO",
-      category: "ELASTICMIND",
-    },
-    {
-      image: ArticleImage,
-      sector: "nft",
-      title: "Neque porro quisquam est qui dolorem",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
-      author: "John Doe",
-      authorPosition: "CEO",
-      category: "ELASTICMIND",
-    },
-    {
-      image: ArticleImage,
-      sector: "nft",
-      title: "Neque porro quisquam est qui dolorem",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
-      author: "John Doe",
-      authorPosition: "CEO",
-      category: "ELASTICMIND",
-    },
-    {
-      image: ArticleImage,
-      sector: "nft",
-      title: "Neque porro quisquam est qui dolorem",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
-      author: "John Doe",
-      authorPosition: "CEO",
-      category: "LATEST ARTICLE",
-    },
-    {
-      image: ArticleImage,
-      sector: "nft",
-      title: "Neque porro quisquam est qui dolorem",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
-      author: "John Doe",
-      authorPosition: "CEO",
-      category: "POPULAR ARTICLE",
-    },
   ];
 
   const filteredArticles =
@@ -107,14 +44,19 @@ export default function Articles() {
             with the blend of the brightest technological minds.
           </p>
 
-          <button className={styles.buttonReadMore}>Read more</button>
+          <button
+            className={styles.buttonReadMore}
+            onClick={() => handleScrollToSection("articles")}
+          >
+            Read more
+          </button>
         </div>
 
         <section className={styles.categoriesContainer}>
           <div className={styles.categories}>
-            {categories.map((category) => (
+            {categories.map((category, index) => (
               <h2
-                key={category}
+                key={index}
                 className={`${styles.articleCategory} ${
                   selectedCategory === category ? styles.articleSelected : ""
                 }`}
@@ -126,7 +68,7 @@ export default function Articles() {
           </div>
         </section>
 
-        <section className={styles.articlesContainer}>
+        <section className={styles.articlesContainer} id="articles">
           <header className={styles.articlesHeader}>
             <h1 className={styles.titleArticlesList}>
               <span className={styles.titleArticlesEmphasis}>ELASTICMIND</span>{" "}
@@ -141,7 +83,8 @@ export default function Articles() {
           <section className={styles.articles}>
             {filteredArticles.map((article) => (
               <CardArticle
-                key={article.title}
+                key={article.id}
+                id={article.id}
                 image={article.image}
                 sector={article.sector}
                 title={article.title}
