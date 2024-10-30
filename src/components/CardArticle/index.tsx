@@ -1,7 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import styles from "./styles.module.css";
+import { useRouter } from "next/navigation";
 
 interface ICardProps {
+  id: string;
   image: StaticImageData;
   sector: string;
   title: string;
@@ -12,6 +14,7 @@ interface ICardProps {
 }
 
 export function CardArticle({
+  id,
   image,
   sector,
   title,
@@ -20,6 +23,7 @@ export function CardArticle({
   authorPosition,
   category,
 }: ICardProps) {
+  const router = useRouter();
   return (
     <main className={styles.container}>
       <Image className={styles.articleImage} src={image} alt="Article image" />
@@ -34,7 +38,12 @@ export function CardArticle({
             <span>{author}</span>
             <span className={styles.authorPosition}>{authorPosition}</span>
           </div>
-          <button className={styles.button}>Read More</button>
+          <button
+            className={styles.button}
+            onClick={() => router.push(`/articles/${id}`)}
+          >
+            Read More
+          </button>
         </div>
       </section>
     </main>

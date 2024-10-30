@@ -1,5 +1,6 @@
 import { ArrowRight } from "react-feather";
 import styles from "./styles.module.css";
+import { handleScrollToSection } from "@/utils/scrollUtils";
 
 interface ICardPriorityProps {
   category: string;
@@ -10,7 +11,6 @@ interface ICardPriorityProps {
 export function CardPriority({
   category,
   title,
-
   listDescription,
 }: ICardPriorityProps) {
   return (
@@ -25,7 +25,7 @@ export function CardPriority({
         ))}
       </ul>
 
-      <button className={styles.button}>
+      <button className={styles.button}    onClick={() => handleScrollToSection("blog")}>
         <span className={styles.buttonText}>Visit Blog</span> <ArrowRight />
       </button>
     </main>

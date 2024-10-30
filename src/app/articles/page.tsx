@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { CardArticle } from "@/components/CardArticle";
 import { articles } from "@/database/data";
+import { handleScrollToSection } from "@/utils/scrollUtils";
 
 export default function Articles() {
   const [selectedCategory, setSelectedCategory] = useState("ALL ARTICLE");
@@ -43,7 +44,12 @@ export default function Articles() {
             with the blend of the brightest technological minds.
           </p>
 
-          <button className={styles.buttonReadMore}>Read more</button>
+          <button
+            className={styles.buttonReadMore}
+            onClick={() => handleScrollToSection("articles")}
+          >
+            Read more
+          </button>
         </div>
 
         <section className={styles.categoriesContainer}>
@@ -62,7 +68,7 @@ export default function Articles() {
           </div>
         </section>
 
-        <section className={styles.articlesContainer}>
+        <section className={styles.articlesContainer} id="articles">
           <header className={styles.articlesHeader}>
             <h1 className={styles.titleArticlesList}>
               <span className={styles.titleArticlesEmphasis}>ELASTICMIND</span>{" "}
@@ -78,6 +84,7 @@ export default function Articles() {
             {filteredArticles.map((article) => (
               <CardArticle
                 key={article.id}
+                id={article.id}
                 image={article.image}
                 sector={article.sector}
                 title={article.title}

@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import styles from "./styles.module.css";
+import { useRouter } from "next/navigation";
 
 interface IBlogItemListProps {
   image: StaticImageData;
@@ -12,6 +13,8 @@ export function BlogItemList({
   title,
   description,
 }: IBlogItemListProps) {
+  const router = useRouter();
+
   return (
     <main className={styles.container}>
       <Image
@@ -25,7 +28,12 @@ export function BlogItemList({
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{description}</p>
         <div className={styles.buttonContainer}>
-          <button className={styles.button}>Read More</button>
+          <button
+            className={styles.button}
+            onClick={() => router.push("/articles")}
+          >
+            Read More
+          </button>
         </div>
       </div>
     </main>
