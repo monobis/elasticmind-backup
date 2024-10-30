@@ -10,16 +10,7 @@ import {
   IPriority,
   IService,
 } from "./IData";
-import { v4 as uuidv4 } from "uuid";
-import {
-  ArrowDown,
-  Code,
-  Figma,
-  Grid,
-  Search,
-  Settings,
-  Tool,
-} from "react-feather";
+import { Code, Figma, Grid, Search, Settings, Tool } from "react-feather";
 export const priorities: IPriority[] = [
   {
     id: "a3bb189e-8bf9-3888-9912-ace4e6543002",
@@ -182,42 +173,42 @@ export const articles: IArticle[] = [
 
 export const services: IService[] = [
   {
-    id: uuidv4(),
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d496",
     title: "Design",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
     Icon: Figma,
   },
   {
-    id: uuidv4(),
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d497",
     title: "Software Engineering",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
     Icon: Code,
   },
   {
-    id: uuidv4(),
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d498",
     title: "Quality Assurance",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
     Icon: Search,
   },
   {
-    id: uuidv4(),
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d499",
     title: "DevOps",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
     Icon: Settings,
   },
   {
-    id: uuidv4(),
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d500",
     title: "Support & Maintenance",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
     Icon: Tool,
   },
   {
-    id: uuidv4(),
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d501",
     title: "Project Management",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod Ut enim ad minim veniam, quis nostrud",
@@ -245,19 +236,19 @@ export const businesses: IBusiness[] = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d482", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d482",
     title: "Startups",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d483", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d483",
     title: "Enterprises",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d484", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d484",
     title: "Small to medium",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore",
@@ -266,7 +257,7 @@ export const businesses: IBusiness[] = [
 
 export const feedbacks: IFeedback[] = [
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d485", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d485",
     image: PeapleImage,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
@@ -274,7 +265,7 @@ export const feedbacks: IFeedback[] = [
     stars: 5,
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d486", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d486",
     image: PeapleImage,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
@@ -282,7 +273,7 @@ export const feedbacks: IFeedback[] = [
     stars: 5,
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d487", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d487",
     image: PeapleImage,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
@@ -290,7 +281,7 @@ export const feedbacks: IFeedback[] = [
     stars: 5,
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d488", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d488",
     image: PeapleImage,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
@@ -298,7 +289,7 @@ export const feedbacks: IFeedback[] = [
     stars: 5,
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d489", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d489",
     image: PeapleImage,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.",
@@ -309,35 +300,35 @@ export const feedbacks: IFeedback[] = [
 
 export const blogPosts: IBlogPost[] = [
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d490", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d490",
     image: BlogBanner,
     title: "Latest Blog Posts",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et.",
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d491", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d491",
     image: BlogBanner,
     title: "Latest Blog Posts",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et.",
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d492", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d492",
     image: BlogBanner,
     title: "Latest Blog Posts",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et.",
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d493", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d493",
     image: BlogBanner,
     title: "Latest Blog Posts",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et dolore doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incididunt ut labore et.",
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d494", // ID fixo
+    id: "f47ac10b-58cc-4372-a567-0e02b2c3d494",
     image: BlogBanner,
     title: "Latest Blog Posts",
     description:

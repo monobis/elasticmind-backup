@@ -9,8 +9,6 @@ import { articles } from "@/database/data";
 export default function Articles() {
   const [selectedCategory, setSelectedCategory] = useState("ALL ARTICLE");
 
-  console.log(articles);
-
   const categories = [
     "ALL ARTICLE",
     "POPULAR ARTICLE",

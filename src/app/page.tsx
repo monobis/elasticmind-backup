@@ -3,16 +3,7 @@ import { motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Carousel } from "@/components/Carousel";
 import styles from "./page.module.css";
-import PeapleImage from "@/../public/peaple-image.jpeg";
-import {
-  ArrowDown,
-  Code,
-  Figma,
-  Grid,
-  Search,
-  Settings,
-  Tool,
-} from "react-feather";
+import { ArrowDown } from "react-feather";
 import {
   blogPosts,
   businesses,
