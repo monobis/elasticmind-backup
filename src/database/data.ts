@@ -108,66 +108,102 @@ export const articles: IArticle[] = [
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend. Suspendisse 
+mattis rhoncus purus, et commodo mi lacinia at. Aenean auctor et felis id feugiat. Nulla facilisi. Maecenas auctor augue quis 
+justo pretium sodales. Proin in tincidunt felis. Nunc fringilla tellus turpis, in accumsan tellus blandit sed. Ut sit amet 
+imperdiet ipsum. Donec varius et dui a dignissim. Vivamus id metus dapibus, auctor risus non, venenatis odio. Nunc ultricies 
+facilisis ligula ac congue. Mauris lectus odio, accumsan quis gravida non, maximus vitae nisi. Nunc vel erat fermentum, 
+accumsan augue vel, eleifend tellus. Vestibulum a ex nec ipsum aliquam commodo. Donec arcu orci, mollis sit amet blandit 
+at, ultrices ornare diam. Mauris at lacus tincidunt, dignissim velit et, facilisis velit.`,
     author: "John Doe",
     authorPosition: "CEO",
     category: ArticleCategory.Latest,
+    principal: true,
   },
   {
     id: "9b1deb24-79c2-42c8-9529-3e657d841e1e",
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend. Suspendisse 
+    mattis rhoncus purus, et commodo mi lacinia at. Aenean auctor et felis id feugiat. Nulla facilisi. Maecenas auctor augue quis 
+    justo pretium sodales. Proin in tincidunt felis. Nunc fringilla tellus turpis, in accumsan tellus blandit sed. Ut sit amet 
+    imperdiet ipsum. Donec varius et dui a dignissim. Vivamus id metus dapibus, auctor risus non, venenatis odio. Nunc ultricies 
+    facilisis ligula ac congue. Mauris lectus odio, accumsan quis gravida non, maximus vitae nisi. Nunc vel erat fermentum, 
+    accumsan augue vel, eleifend tellus. Vestibulum a ex nec ipsum aliquam commodo. Donec arcu orci, mollis sit amet blandit 
+    at, ultrices ornare diam. Mauris at lacus tincidunt, dignissim velit et, facilisis velit.`,
     author: "John Doe",
     authorPosition: "CEO",
     category: ArticleCategory.Elasticmind,
+    principal: false,
   },
   {
     id: "c4b30c29-b91d-4b4a-8a48-0f67c52557b4",
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend. Suspendisse 
+    mattis rhoncus purus, et commodo mi lacinia at. Aenean auctor et felis id feugiat. Nulla facilisi. Maecenas auctor augue quis 
+    justo pretium sodales. Proin in tincidunt felis. Nunc fringilla tellus turpis, in accumsan tellus blandit sed. Ut sit amet 
+    imperdiet ipsum. Donec varius et dui a dignissim. Vivamus id metus dapibus, auctor risus non, venenatis odio. Nunc ultricies 
+    facilisis ligula ac congue. Mauris lectus odio, accumsan quis gravida non, maximus vitae nisi. Nunc vel erat fermentum, 
+    accumsan augue vel, eleifend tellus. Vestibulum a ex nec ipsum aliquam commodo. Donec arcu orci, mollis sit amet blandit 
+    at, ultrices ornare diam. Mauris at lacus tincidunt, dignissim velit et, facilisis velit.`,
     author: "John Doe",
     authorPosition: "CEO",
     category: ArticleCategory.Elasticmind,
+    principal: false,
   },
   {
     id: "1c708b10-11f4-4ecf-a5be-d48e65c0ac66",
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend. Suspendisse 
+    mattis rhoncus purus, et commodo mi lacinia at. Aenean auctor et felis id feugiat. Nulla facilisi. Maecenas auctor augue quis 
+    justo pretium sodales. Proin in tincidunt felis. Nunc fringilla tellus turpis, in accumsan tellus blandit sed. Ut sit amet 
+    imperdiet ipsum. Donec varius et dui a dignissim. Vivamus id metus dapibus, auctor risus non, venenatis odio. Nunc ultricies 
+    facilisis ligula ac congue. Mauris lectus odio, accumsan quis gravida non, maximus vitae nisi. Nunc vel erat fermentum, 
+    accumsan augue vel, eleifend tellus. Vestibulum a ex nec ipsum aliquam commodo. Donec arcu orci, mollis sit amet blandit 
+    at, ultrices ornare diam. Mauris at lacus tincidunt, dignissim velit et, facilisis velit.`,
     author: "John Doe",
     authorPosition: "CEO",
     category: ArticleCategory.Elasticmind,
+    principal: false,
   },
   {
     id: "f8966f53-2c55-4e1d-9ef9-d6e88f1392a5",
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend. Suspendisse 
+mattis rhoncus purus, et commodo mi lacinia at. Aenean auctor et felis id feugiat. Nulla facilisi. Maecenas auctor augue quis 
+justo pretium sodales. Proin in tincidunt felis. Nunc fringilla tellus turpis, in accumsan tellus blandit sed. Ut sit amet 
+imperdiet ipsum. Donec varius et dui a dignissim. Vivamus id metus dapibus, auctor risus non, venenatis odio. Nunc ultricies 
+facilisis ligula ac congue. Mauris lectus odio, accumsan quis gravida non, maximus vitae nisi. Nunc vel erat fermentum, 
+accumsan augue vel, eleifend tellus. Vestibulum a ex nec ipsum aliquam commodo. Donec arcu orci, mollis sit amet blandit 
+at, ultrices ornare diam. Mauris at lacus tincidunt, dignissim velit et, facilisis velit.`,
     author: "John Doe",
     authorPosition: "CEO",
     category: ArticleCategory.Latest,
+    principal: false,
   },
   {
     id: "b7f2244a-dc04-42f0-bff8-bb9e6d4b5e78",
     image: ArticleImage,
     sector: "nft",
     title: "Neque porro quisquam est qui dolorem",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend.",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus massa ac felis gravida eleifend. Suspendisse 
+    mattis rhoncus purus, et commodo mi lacinia at. Aenean auctor et felis id feugiat. Nulla facilisi. Maecenas auctor augue quis 
+    justo pretium sodales. Proin in tincidunt felis. Nunc fringilla tellus turpis, in accumsan tellus blandit sed. Ut sit amet 
+    imperdiet ipsum. Donec varius et dui a dignissim. Vivamus id metus dapibus, auctor risus non, venenatis odio. Nunc ultricies 
+    facilisis ligula ac congue. Mauris lectus odio, accumsan quis gravida non, maximus vitae nisi. Nunc vel erat fermentum, 
+    accumsan augue vel, eleifend tellus. Vestibulum a ex nec ipsum aliquam commodo. Donec arcu orci, mollis sit amet blandit 
+    at, ultrices ornare diam. Mauris at lacus tincidunt, dignissim velit et, facilisis velit.`,
     author: "John Doe",
     authorPosition: "CEO",
     category: ArticleCategory.Popular,
+    principal: false,
   },
 ];
 

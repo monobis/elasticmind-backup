@@ -5,9 +5,11 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { CardArticle } from "@/components/CardArticle";
 import { articles } from "@/database/data";
-import { handleScrollToSection } from "@/utils/scrollUtils";
+import { useRouter } from "next/navigation";
 
 export default function Articles() {
+  const router = useRouter();
+
   const [selectedCategory, setSelectedCategory] = useState("ALL ARTICLE");
 
   const categories = [
@@ -18,6 +20,10 @@ export default function Articles() {
     "NEWS",
     "WORLD",
   ];
+
+  const principalArticle = articles.find(
+    (article) => article.principal === true
+  );
 
   const filteredArticles =
     selectedCategory === "ALL ARTICLE"
@@ -34,19 +40,21 @@ export default function Articles() {
       <section className={styles.container}>
         <div className={styles.coreContent}>
           <h1 className={styles.coreTitle}>
-            <span className={styles.titleCategory}>Título:</span> Chamada
-            notícia Principal.
+            {principalArticle && principalArticle.title}
           </h1>
 
-          <p className={styles.coreDescription}>
-            Elasticmind is more than just a software development company. We’re
-            a team of people driven by innovation who pull off the impossible
-            with the blend of the brightest technological minds.
-          </p>
+          <div className={styles.coreDescriptionContainer}>
+            <p className={styles.coreDescription}>
+              {principalArticle && principalArticle.description}
+            </p>
+          </div>
 
           <button
             className={styles.buttonReadMore}
-            onClick={() => handleScrollToSection("articles")}
+            onClick={() =>
+              principalArticle &&
+              router.push(`/articles/${principalArticle.id}`)
+            }
           >
             Read more
           </button>

@@ -1,23 +1,62 @@
 import Image from "next/image";
 import LogoHeaderWhite from "@/../public/logo-header-white.svg";
 import styles from "./styles.module.css";
+import { useRouter } from "next/navigation";
+import { handleScrollToSection } from "@/utils/scrollUtils";
 
 export function Footer() {
+  const router = useRouter();
   return (
     <footer className={styles.containerFooter}>
       <section className={styles.contentFooter}>
         <div className={styles.containerImg}>
-          <Image src={LogoHeaderWhite} alt="Logo" priority width={125} />
+          <Image
+            src={LogoHeaderWhite}
+            alt="Logo"
+            priority
+            width={125}
+            onClick={() => router.push("/")}
+          />
         </div>
 
         <div className={styles.containerListLinks}>
           <ul className={styles.listLinks}>
-            <li className={styles.listItem}>Home</li>
-            <li className={styles.listItem}>About Us</li>
-            <li className={styles.listItem}>Services</li>
-            <li className={styles.listItem}>Features</li>
-            <li className={styles.listItem}>Blog</li>
-            <li className={styles.listItem}>Community</li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("home")}
+            >
+              Home
+            </li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("home")}
+            >
+              About Us
+            </li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("services")}
+            >
+              Services
+            </li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("portfolio")}
+            >
+              Features
+            </li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("blog")}
+            >
+              Blog
+            </li>
+            <li
+              className={styles.listItem}
+              onClick={() => handleScrollToSection("technology")}
+            >
+              Community
+            </li>
           </ul>
         </div>
       </section>
