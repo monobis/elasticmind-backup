@@ -58,3 +58,8 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-rose-200);
 }
+
+::selection {
+  background-color: var(--color-rose-200);
+  color: var(--color-white);
+}
