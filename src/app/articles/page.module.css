@@ -18,6 +18,13 @@
   color: var(--color-gray-100);
 }
 
+.coreDescriptionContainer {
+  height: 12rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  border: 4px solid transparent;
+}
+
 .coreDescription {
   font-size: var(--font-size-md);
   color: var(--color-gray-100);

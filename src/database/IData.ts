@@ -25,6 +25,7 @@ export interface IArticle {
   author: string;
   authorPosition: string;
   category: ArticleCategory;
+  principal: boolean;
 }
 
 export interface IService {

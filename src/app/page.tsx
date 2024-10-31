@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <main className={styles.container}>
       <Header />
-      <section className={styles.content}>
+      <section id="home" className={styles.content}>
         <div className={styles.centerContent}>
           <h1 className={styles.title}>
             Thought leaders In Front End digital Transformation
@@ -93,7 +93,7 @@ export default function Home() {
           </Carousel>
         </div>
 
-        <div className={styles.carousel}>
+        <div id="technology" className={styles.carousel}>
           <h2 className={styles.titleCarousel}>Technology</h2>
           <Carousel key="carousel-technologies">
             <motion.div className={styles.containerCard}>
@@ -222,7 +222,7 @@ export default function Home() {
             <h1 className={styles.feedbackTitle}>Feedbacks from Our Clients</h1>
           </div>
 
-          <div id="blog" className={styles.feedbackSlider}>
+          <div className={styles.feedbackSlider}>
             <Slider>
               {feedbacks.map((feedback) => (
                 <SwiperSlide key={feedback.id}>
@@ -311,7 +311,7 @@ export default function Home() {
             <textarea
               className={styles.comment}
               name="comment"
-              id="coment"
+              id="comment"
               placeholder="Your comment..."
               value={comment}
               onChange={(e) => setComment(e.target.value)}
@@ -347,7 +347,7 @@ export default function Home() {
           </form>
         </div>
 
-        <div className={styles.blogContent}>
+        <div id="blog" className={styles.blogContent}>
           <h1 className={styles.blogListTitle}>Blog</h1>
           <div className={styles.blogList}>
             {blogPosts

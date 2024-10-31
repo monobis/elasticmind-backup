@@ -2,15 +2,21 @@ import Image from "next/image";
 import LogoHeaderWhite from "@/../public/logo-header-white.svg";
 import styles from "./style.module.css";
 import { handleScrollToSection } from "@/utils/scrollUtils";
-
-
+import { useRouter } from "next/navigation";
 
 export function Header() {
+  const router = useRouter();
   return (
     <header className={styles.containerHeader}>
       <section className={styles.leftContent}>
         <div className={styles.containerImg}>
-          <Image src={LogoHeaderWhite} alt="Logo" priority width={125} />
+          <Image
+            src={LogoHeaderWhite}
+            alt="Logo"
+            priority
+            width={125}
+            onClick={() => router.push("/")}
+          />
         </div>
 
         <div className={styles.containerListLinks}>
