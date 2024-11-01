@@ -1,12 +1,5 @@
 <p align='center'><img width='400' src="./.github/logo-elastic.svg"/></p>
 
- <p align='center'>
-
-<img src="https://img.shields.io/github/repo-size/elasticmind-io/elasticmind">
-<img src="https://img.shields.io/github/languages/count/elasticmind-io/elasticmind">
-<img src="https://img.shields.io/github/last-commit/elasticmind-io/elasticmind">  
-</p>
-
 ## 🚀 Tecnologias
 
 Esse projeto está utilizando as seguintes tecnologias:
