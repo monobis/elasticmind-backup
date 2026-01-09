@@ -21,11 +21,11 @@ export function CardArticle({
   description,
   author,
   authorPosition,
-  category,
 }: ICardProps) {
   const router = useRouter();
+
   return (
-    <main className={styles.container}>
+    <article className={styles.container}>
       <Image className={styles.articleImage} src={image} alt="Article image" />
 
       <section className={styles.content}>
@@ -46,6 +46,6 @@ export function CardArticle({
           </button>
         </div>
       </section>
-    </main>
+    </article>
   );
 }

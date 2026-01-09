@@ -3,13 +3,13 @@ import styles from "./styles.module.css";
 
 export function CardTechnologyPrimary() {
   return (
-    <main className={styles.container}>
+    <article className={styles.container}>
       <button className={styles.button}>
         <span className={styles.buttonText}>
           Check our open source contributions
-        </span>{" "}
+        </span>
         <ArrowDown />
       </button>
-    </main>
+    </article>
   );
 }

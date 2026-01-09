@@ -16,7 +16,7 @@ export function BlogItemList({
   const router = useRouter();
 
   return (
-    <main className={styles.container}>
+    <article className={styles.container}>
       <Image
         className={styles.imageBanner}
         width={450}
@@ -36,6 +36,6 @@ export function BlogItemList({
           </button>
         </div>
       </div>
-    </main>
+    </article>
   );
 }

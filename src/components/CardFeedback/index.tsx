@@ -16,7 +16,7 @@ export function CardFeedback({
   stars,
 }: ICardFeedbackProps) {
   return (
-    <main className={styles.container}>
+    <article className={styles.container}>
       <header className={styles.header}>
         <Image
           src={image}
@@ -39,6 +39,6 @@ export function CardFeedback({
           </div>
         </div>
       </div>
-    </main>
+    </article>
   );
 }

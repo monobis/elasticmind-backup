@@ -27,9 +27,10 @@ export default function Articles() {
 
   const filteredArticles =
     selectedCategory === "ALL ARTICLE"
-      ? articles
+      ? articles.filter((article) => !article.principal)
       : articles.filter(
           (article) =>
+            !article.principal &&
             article.category.toLowerCase() === selectedCategory.toLowerCase()
         );
 

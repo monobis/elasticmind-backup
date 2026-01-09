@@ -1,11 +1,10 @@
-.container {
+A.container {
   width: 50rem;
   padding: 3rem;
   font-size: var(--font-size-lg);
   box-shadow: 1px 5px 10px var(--color-violet-300);
   border-top: 1px solid var(--color-violet-300);
   border-radius: 0.5rem;
-
   margin: 2rem;
 }
 
@@ -39,6 +38,7 @@
 .author {
   font-size: var(--font-size-lg);
   text-transform: uppercase;
+  margin-top: 1rem;
 }
 
 .stars {
@@ -47,4 +47,14 @@
 
 .icon {
   margin-right: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .content {
+    font-size: var(--font-size-md);
+  }
+  .clientImage {
+    width: 140px;
+    height: 140px;
+  }
 }

@@ -14,20 +14,25 @@ export function CardPriority({
   listDescription,
 }: ICardPriorityProps) {
   return (
-    <main className={styles.container}>
+    <section className={styles.container}>
       <h4 className={styles.emphasis}>{category}</h4>
       <h2 className={styles.title}>{title}</h2>
+
       <ul className={styles.list}>
-        {listDescription.map((description, index) => (
-          <li key={index} className={styles.listItem}>
+        {listDescription.map((description) => (
+          <li key={description} className={styles.listItem}>
             {description}
           </li>
         ))}
       </ul>
 
-      <button className={styles.button}    onClick={() => handleScrollToSection("blog")}>
-        <span className={styles.buttonText}>Visit Blog</span> <ArrowRight />
+      <button
+        className={styles.button}
+        onClick={() => handleScrollToSection("blog")}
+      >
+        <span className={styles.buttonText}>Visit Blog</span>
+        <ArrowRight />
       </button>
-    </main>
+    </section>
   );
 }
