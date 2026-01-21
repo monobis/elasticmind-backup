@@ -85,3 +85,13 @@
 .button:hover {
   background-color: var(--color-rose-200);
 }
+
+@media (max-width: 500px) {
+  .button {
+    .button {
+      font-size: 0.5rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 1rem;
+    }
+  }
+}

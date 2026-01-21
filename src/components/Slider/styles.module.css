@@ -10,3 +10,11 @@
   width: var(--swiper-navigation-size);
   height: var(--swiper-navigation-size);
 }
+
+@media (max-width: 500px) {
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+}

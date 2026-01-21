@@ -82,3 +82,40 @@
     margin-right: 2rem;
   }
 }
+
+@media (max-width: 500px) {
+  .listLinks {
+    font-size: var(--font-size-xs);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .listItem {
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    margin-right: 1.5rem;
+  }
+
+  .containerContactItem {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 2rem;
+  }
+
+  .titleContact {
+    font-size: var(--font-size-sm);
+  }
+
+  .contactItem {
+    font-size: var(--font-size-xs);
+  }
+}
