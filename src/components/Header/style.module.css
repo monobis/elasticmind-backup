@@ -79,23 +79,28 @@
     padding: 1.8rem 2rem 0 2rem;
   }
 
+  .containerImg {
+    margin-right: 0.8rem;
+    max-width: 30px;
+  }
+
   .listLinks {
     font-size: 14px;
   }
 
   .listItem {
-    margin-right: 1.2rem;
+    margin-right: 1rem;
   }
 
   .button {
-    padding: 0.6rem 1.4rem;
-    font-size: 14px;
+    padding: 0.6rem 0.8rem;
+    font-size: 10px;
   }
 }
 
 @media (max-width: 500px) {
   .containerImg {
-    width: 70px;
+    max-width: 70px;
     margin-right: 1rem;
   }
 
