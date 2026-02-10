@@ -77,20 +77,23 @@ export default function Home() {
         </div>
 
         <div id="clients" className={styles.carousel}>
-          <h2 className={styles.titleCarousel}>Priorities</h2>
-          <Carousel key="carousel-priorities">
-            {priorities.map((priority) => (
-              <motion.div key={priority.id} className={styles.containerCard}>
-                <div className={styles.card}>
-                  <CardPriority
-                    category={priority.category}
-                    title={priority.title}
-                    listDescription={priority.listDescription}
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </Carousel>
+          <div className={styles.carouselCardWrapper}>
+            <h2 className={styles.titleCarousel}>Priorities</h2>
+
+            <Carousel key="carousel-priorities">
+              {priorities.map((priority) => (
+                <motion.div key={priority.id} className={styles.containerCard}>
+                  <div className={styles.card}>
+                    <CardPriority
+                      category={priority.category}
+                      title={priority.title}
+                      listDescription={priority.listDescription}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </Carousel>
+          </div>
         </div>
 
         <div id="technology" className={styles.carousel}>

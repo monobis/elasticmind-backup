@@ -55,7 +55,7 @@
 }
 
 .carousel {
-  margin-top: 12.5rem;
+  margin-top: 10.5rem;
   margin-inline-start: 1rem;
 }
 
@@ -88,7 +88,7 @@
 
 .cardTechnologySecondary {
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
 }
 
 .ourServices {
@@ -464,23 +464,18 @@
 
 @media (max-width: 800px) {
   .centerContent {
-    background-size: 120vw auto;
-  }
-  .centerContent {
     width: 100%;
     margin-top: 6rem;
     padding-inline: 1rem;
     margin-left: 0;
+    background-size: 120vw auto;
   }
 
   .title {
     display: flex;
+    justify-content: center;
     font-size: var(--font-size-xl);
     line-height: 3.5rem;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-    justify-content: center;
   }
 
   .description {
@@ -493,58 +488,46 @@
   .buttonReview {
     display: flex;
     justify-content: center;
-    margin: 2.5rem auto 0 auto;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
+    margin: 2.5rem auto 0;
     font-size: var(--font-size-md);
   }
 
-  .titleCarousel {
-    padding-inline: 1rem;
-  }
-
-  .containerCard {
+  .titleCarousel,
+  .containerCard,
+  .services,
+  .feedbackContainer,
+  .blogContent {
     padding-inline: 1rem;
   }
 
   .ourServices {
     margin-top: 2rem;
-    max-width: 0 auto;
-    padding-inline: 0.5rem;
+    padding-inline: 1rem;
   }
 
   .ourServicesContent {
     display: flex;
     justify-content: space-between;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    gap: 2rem;
   }
 
   .ourServicesTitle {
+    flex: 1;
+    max-width: 18rem;
     font-size: var(--font-size-lg);
-    max-width: 10rem;
     line-height: 3rem;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
   }
 
   .numberData {
+    width: 100%;
+    max-width: 28rem;
+    padding: 3rem 0.8rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 0.75rem;
-    width: 11rem;
-    height: 11rem;
-    padding: 0.5rem;
-    background: linear-gradient(
-      47deg,
-      var(--color-violet-600) 0%,
-      var(--color-rose-300) 100%
-    );
-    color: var(--color-white);
+    gap: 10px;
   }
-
   .clientsNumber {
     font-size: var(--font-size-md);
   }
@@ -553,21 +536,18 @@
     font-size: var(--font-size-xs);
   }
 
-  .services {
-    display: flex;
-    margin-inline-start: 0.75rem;
-    padding-inline-end: 2rem;
-    justify-content: center;
+  .businesses,
+  .feedbackContainer,
+  .contactContent {
     margin-top: 5rem;
-    padding-inline: 2rem;
   }
 
   .businesses {
-    margin-top: 5rem;
     padding-inline-start: 1rem;
   }
 
-  .businessesContent {
+  .businessesContent,
+  .feedbackContent {
     margin-left: 1rem;
   }
 
@@ -584,21 +564,9 @@
   .imageReinvent {
     margin-top: 5rem;
     height: 40vh;
-    width: auto;
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  .feedbackContainer {
-    margin-top: 5rem;
-    padding-inline-start: 1rem;
-    padding-inline-end: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .feedbackContent {
-    margin-left: 1rem;
+    background-repeat: no-repeat;
   }
 
   .feedbackTitle {
@@ -606,38 +574,29 @@
     max-width: 15rem;
   }
 
-  .contactContent {
-    margin-top: 5rem;
-  }
-
   .headerTitle {
-    font-size: var(--font-size-xl);
     margin-inline: 1rem;
     text-align: center;
   }
 
   .headerDescription {
-    text-align: justify;
     font-size: var(--font-size-sm);
-    margin-inline: 1rem;
-    margin-top: 1rem;
+    margin: 1rem;
+    text-align: justify;
   }
 
   .formContact {
     display: flex;
     flex-direction: column;
     width: 95%;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
     text-align: center;
     margin-top: 1rem;
   }
 
   .buttonContact {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 100%;
     font-size: var(--font-size-xs);
     padding-inline: 0.5rem;
@@ -652,11 +611,6 @@
     font-size: var(--font-size-sm);
   }
 
-  .blogContent {
-    margin-top: 8rem;
-    padding-inline: 2rem;
-  }
-
   .blogListTitle {
     font-size: var(--font-size-xl);
   }
@@ -668,210 +622,27 @@
   .buttonReadMoreBlogs {
     font-size: var(--font-size-md);
   }
+
   .footer {
     margin-top: 5rem;
   }
 }
 
 @media (max-width: 500px) {
-  .centerContent {
-    width: 100%;
-    margin-top: 6rem;
-    padding-inline: 1rem;
-    margin-left: 0;
-  }
-
-  .title {
-    font-size: var(--font-size-xl);
-    line-height: 3.5rem;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-  }
-
-  .titleCarousel {
-    padding-inline: 1rem;
-  }
-
-  .containerCard {
-    padding-inline: 1rem;
-  }
-
   .description {
     width: 20rem;
     font-size: var(--font-size-sm);
   }
 
+  .containerCard {
+    width: 90vw;
+  }
+
   .buttonReview {
-    margin: 2.5rem auto 0 auto;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
     font-size: var(--font-size-sm);
-  }
-
-  .ourServices {
-    margin-top: 2rem;
-    max-width: 0 auto;
-    padding-inline: 0.5rem;
-  }
-
-  .ourServicesContent {
-    display: flex;
-    justify-content: space-between;
   }
 
   .ourServicesTitle {
     font-size: var(--font-size-md);
-    max-width: 10rem;
-    line-height: 3rem;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-  }
-
-  .numberData {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 0.75rem;
-    width: 11rem;
-    height: 11rem;
-    padding: 0.5rem;
-    background: linear-gradient(
-      47deg,
-      var(--color-violet-600) 0%,
-      var(--color-rose-300) 100%
-    );
-    color: var(--color-white);
-  }
-
-  .clientsNumber {
-    font-size: var(--font-size-md);
-  }
-
-  .clientsText {
-    font-size: var(--font-size-xs);
-  }
-
-  .services {
-    display: flex;
-    margin-inline-start: 0.75rem;
-    padding-inline-end: 2rem;
-    justify-content: center;
-    margin-top: 5rem;
-    padding-inline: 2rem;
-  }
-
-  .businesses {
-    margin-top: 5rem;
-    padding-inline-start: 1rem;
-  }
-
-  .businessesContent {
-    margin-left: 1rem;
-  }
-
-  .businessesText {
-    font-size: var(--font-size-xl);
-  }
-
-  .containerCardBusinesses {
-    max-width: 26rem;
-    min-height: 12.5rem;
-    margin-top: 2rem;
-  }
-
-  .imageReinvent {
-    margin-top: 5rem;
-    height: 40vh;
-    width: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .feedbackContainer {
-    margin-top: 5rem;
-    padding-inline-start: 1rem;
-    padding-inline-end: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .feedbackContent {
-    margin-left: 1rem;
-  }
-
-  .feedbackTitle {
-    font-size: var(--font-size-lg-xl);
-    max-width: 15rem;
-  }
-
-  .contactContent {
-    margin-top: 5rem;
-  }
-
-  .headerTitle {
-    font-size: var(--font-size-xl);
-    margin-inline: 1rem;
-    text-align: center;
-  }
-
-  .headerDescription {
-    text-align: justify;
-    font-size: var(--font-size-sm);
-    margin-inline: 1rem;
-    margin-top: 1rem;
-  }
-
-  .formContact {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-    text-align: center;
-    margin-top: 1rem;
-  }
-
-  .buttonContact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    font-size: var(--font-size-xs);
-    padding-inline: 0.5rem;
-    white-space: nowrap;
-  }
-
-  .labelComment {
-    font-size: var(--font-size-xs);
-  }
-
-  .checkboxContent {
-    font-size: var(--font-size-sm);
-  }
-
-  .blogContent {
-    margin-top: 8rem;
-    padding-inline: 2rem;
-  }
-
-  .blogListTitle {
-    font-size: var(--font-size-xl);
-  }
-
-  .blogList {
-    margin-top: 2rem;
-  }
-
-  .buttonReadMoreBlogs {
-    font-size: var(--font-size-md);
-  }
-
-  .footer {
-    margin-top: 5rem;
   }
 }
