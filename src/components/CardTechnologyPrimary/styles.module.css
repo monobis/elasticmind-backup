@@ -30,3 +30,14 @@
 .buttonText {
   margin-right: 0.4rem;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: clamp(20rem, 95%, 28rem);
+    height: 26rem;
+    padding: 2rem;
+  }
+  .button {
+    font-size: var(--font-size-md);
+  }
+}

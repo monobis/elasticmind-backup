@@ -99,13 +99,13 @@ export default function Home() {
         <div id="technology" className={styles.carousel}>
           <h2 className={styles.titleCarousel}>Technology</h2>
           <Carousel key="carousel-technologies">
-            <motion.div className={styles.containerCard}>
+            <motion.div className={styles.containerCardTech}>
               <div className={styles.card}>
                 <CardTechnologyPrimary />
               </div>
             </motion.div>
 
-            <motion.div className={styles.containerCard}>
+            <motion.div className={styles.containerCardTech}>
               <div className={styles.card}>
                 <div className={styles.cardTechnologySecondary}>
                   <CardTechnologySecondary />
@@ -118,7 +118,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div className={styles.containerCard}>
+            <motion.div className={styles.containerCardTech}>
               <div className={styles.card}>
                 <div className={styles.cardTechnologySecondary}>
                   <CardTechnologySecondary />
@@ -131,7 +131,7 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <motion.div className={styles.containerCard}>
+            <motion.div className={styles.containerCardTech}>
               <div className={styles.card}>
                 <div className={styles.cardTechnologySecondary}>
                   <CardTechnologySecondary />
