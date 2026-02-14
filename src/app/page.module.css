@@ -537,7 +537,9 @@
   }
 
   .containerCardTech {
-    min-width: 43rem;
+    min-width: 25rem;
+    display: flex;
+    gap: 2rem;
   }
 
   .numberData {

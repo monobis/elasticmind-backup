@@ -33,7 +33,7 @@
 
 @media (max-width: 768px) {
   .container {
-    width: clamp(20rem, 95%, 28rem);
+    width: clamp(18rem, 95%, 23rem);
     height: 26rem;
     padding: 2rem;
   }

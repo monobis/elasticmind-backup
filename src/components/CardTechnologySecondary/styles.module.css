@@ -10,3 +10,12 @@
   margin-right: 1rem;
   margin-bottom: 2rem;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 18rem;
+    height: 12rem;
+    padding: 2rem;
+    margin-right: 0;
+  }
+}
