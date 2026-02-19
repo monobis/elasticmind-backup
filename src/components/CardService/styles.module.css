@@ -61,3 +61,25 @@
 .buttonText {
   margin-right: 1rem;
 }
+
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .description {
+    font-size: var(--font-size-md);
+  }
+  .button {
+    width: 12rem;
+    height: 2rem;
+  }
+  .buttonText {
+    white-space: nowrap;
+    font-size: var(--font-size-md);
+  }
+
+  .header {
+    font-size: var(--font-size-md-lg);
+  }
+}

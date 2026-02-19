@@ -553,6 +553,10 @@
     font-size: var(--font-size-md);
   }
 
+  .services {
+    margin-top: 5rem;
+  }
+
   .clientsText {
     font-size: var(--font-size-xs);
   }
