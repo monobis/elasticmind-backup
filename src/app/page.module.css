@@ -610,6 +610,19 @@
     text-align: justify;
   }
 
+  .businessesText {
+    font-size: var(--font-size-lg-xl);
+  }
+
+  .containerCardBusinesses {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 20rem;
+    margin: 1rem auto;
+    padding-inline: 0;
+  }
+
   .formContact {
     display: flex;
     flex-direction: column;
@@ -627,6 +640,9 @@
     padding-inline: 0.5rem;
     white-space: nowrap;
   }
+  .contactContent {
+    padding-bottom: 2rem;
+  }
 
   .labelComment {
     font-size: var(--font-size-xs);
@@ -635,7 +651,9 @@
   .checkboxContent {
     font-size: var(--font-size-sm);
   }
-
+  .blogContent {
+    margin-top: 4rem;
+  }
   .blogListTitle {
     font-size: var(--font-size-xl);
   }
@@ -649,7 +667,7 @@
   }
 
   .footer {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 }
 
