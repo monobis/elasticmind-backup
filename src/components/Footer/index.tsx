@@ -64,7 +64,9 @@ export function Footer() {
       <section className={styles.contact}>
         <div className={styles.containerContactItem}>
           <h3 className={styles.titleContact}>Email:</h3>
-          <p className={styles.contactItem}>support@elasticmind.com</p>
+          <p className={`${styles.contactItem} ${styles.email}`}>
+            support@elasticmind.com
+          </p>
         </div>
 
         <div className={styles.containerContactItem}>

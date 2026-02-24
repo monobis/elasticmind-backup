@@ -4,7 +4,6 @@
   padding-block: 3rem;
   padding-inline: 4rem;
   box-shadow: 0 5px 20px var(--color-gray-700);
-  white-space: nowrap;
 }
 
 .contentFooter {
@@ -58,95 +57,50 @@
   color: var(--color-gray-300);
   font-size: var(--font-size-md);
 }
+@media (max-width: 800px) {
+  .contentFooter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    text-align: center;
+  }
 
-@media (max-width: 1024px) {
   .containerFooter {
-    padding-inline: 1.5rem;
-    padding-block: 2rem;
+    padding-inline: 0;
+    white-space: normal;
   }
 
   .containerImg {
-    max-width: 10%;
-    margin-right: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 2px;
+    max-width: 35%;
+  }
+
+  .listLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--font-size-xs);
   }
 
   .listItem {
-    margin-right: 1.5rem;
+    margin-right: 0;
   }
-
   .contact {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.5rem;
     margin-top: 2rem;
   }
 
   .containerContactItem {
-    margin-right: 2rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .listLinks {
-    font-size: var(--font-size-sm);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .listItem {
-    margin-right: 1rem;
-    white-space: nowrap;
-  }
-
-  .contact {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    margin-top: 4rem;
-    flex-wrap: wrap;
-    margin-right: 1.5rem;
-  }
-
-  .containerContactItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-inline: 2rem;
-  }
-
-  .titleContact {
-    font-size: var(--font-size-sm);
-  }
-
-  .contactItem {
-    font-size: var(--font-size-sm);
-  }
-}
-
-@media (max-width: 500px) {
-  .listLinks {
-    font-size: var(--font-size-xs);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .listItem {
-    margin-right: 1rem;
-    white-space: nowrap;
-  }
-
-  .contact {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    margin-top: 4rem;
-    flex-wrap: wrap;
-    margin-right: 1.5rem;
-  }
-
-  .containerContactItem {
-    display: flex;
-    flex-direction: column;
-    margin-inline: 2rem;
+    margin-right: 0;
+    align-items: left;
+    text-align: left;
+    min-width: 0; /* Permite que os filhos quebrem dentro do flex */
   }
 
   .titleContact {
@@ -155,5 +109,13 @@
 
   .contactItem {
     font-size: var(--font-size-xs);
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .email {
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
 }
