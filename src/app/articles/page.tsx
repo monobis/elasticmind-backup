@@ -6,7 +6,8 @@ import { Header } from "@/components/Header";
 import { CardArticle } from "@/components/CardArticle";
 import { articles } from "@/database/data";
 import { useRouter } from "next/navigation";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 export default function Articles() {
   const router = useRouter();
 
@@ -22,7 +23,7 @@ export default function Articles() {
   ];
 
   const principalArticle = articles.find(
-    (article) => article.principal === true
+    (article) => article.principal === true,
   );
 
   const filteredArticles =
@@ -31,7 +32,7 @@ export default function Articles() {
       : articles.filter(
           (article) =>
             !article.principal &&
-            article.category.toLowerCase() === selectedCategory.toLowerCase()
+            article.category.toLowerCase() === selectedCategory.toLowerCase(),
         );
 
   return (
@@ -62,19 +63,20 @@ export default function Articles() {
         </div>
 
         <section className={styles.categoriesContainer}>
-          <div className={styles.categories}>
+          <Swiper spaceBetween={10} slidesPerView={"auto"} grabCursor={true}>
             {categories.map((category, index) => (
-              <h2
-                key={index}
-                className={`${styles.articleCategory} ${
-                  selectedCategory === category ? styles.articleSelected : ""
-                }`}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </h2>
+              <SwiperSlide key={index} style={{ width: "auto" }}>
+                <h2
+                  className={`${styles.articleCategory} ${
+                    selectedCategory === category ? styles.articleSelected : ""
+                  }`}
+                  onClick={() => setSelectedCategory(category)}
+                >
+                  {category}
+                </h2>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </section>
 
         <section className={styles.articlesContainer} id="articles">
