@@ -184,4 +184,9 @@
     text-align: justify;
     font-size: var(--font-size-sm);
   }
+
+  .articles {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
 }
