@@ -180,7 +180,7 @@
   }
 
   .descriptionArticlesHeader {
-    width: 22rem;
+    width: 80vw;
     text-align: justify;
     font-size: var(--font-size-sm);
   }
